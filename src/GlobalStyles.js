@@ -18,5 +18,5 @@ export default styled.createGlobalStyle`
   input,
   textarea {
     font: inherit;
-  }
+  } 
 `;
