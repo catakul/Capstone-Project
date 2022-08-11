@@ -4,12 +4,12 @@
       "name": "Hydrogen",
       "appearance": "colorless gas",
       "atomic_mass": "1.008 g/mol",
-      "boil": "(H2) 20.271 K ​(−252.879 °C, ​−423.182 °F)",
+      "boil": "(H₂) 20.271 K ​(−252.879 °C, ​−423.182 °F)",
       "category": "diatomic-nonmetal",
       "density": "0.08988 g/L",
       "discovered_by": "Henry Cavendish",
-      "melt": "(H2) 13.99 K ​(−259.16 °C, ​−434.49 °F)",
-      "molar_heat": 28.836,
+      "melt": "(H₂) 13.99 K ​(−259.16 °C, ​−434.49 °F)",
+      "molar_heat": "(H₂) 28.836 J/(mol·K)",
       "named_by": "Antoine Lavoisier",
       "number": 1,
       "period": 1,
@@ -31,7 +31,7 @@
     {
       "name": "Helium",
       "appearance": "colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field",
-      "atomic_mass": 4.0026022,
+      "atomic_mass": "4.0026022 g/mol",
       "boil": 4.222,
       "category": "noble-gas",
       "density": 0.1786,
@@ -43,7 +43,7 @@
       "period": 1,
       "phase": "Gas",
       "source": "https://en.wikipedia.org/wiki/Helium",
-      "spectral_img": "https://en.wikipedia.org/wiki/File:Helium_spectrum.jpg",
+      "spectral_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Helium_discharge_tube.jpg/1024px-Helium_discharge_tube.jpg",
       "summary": "Helium is a chemical element with symbol He and atomic number 2. It is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas that heads the noble gas group in the periodic table. Its boiling and melting points are the lowest among all the elements.",
       "symbol": "He",
       "xpos": 18,
@@ -59,7 +59,7 @@
     {
       "name": "Lithium",
       "appearance": "silvery-white",
-      "atomic_mass": 6.94,
+      "atomic_mass": "6.94 g/mol",
       "boil": 1603,
       "category": "alkali-metal",
       "density": 0.534,
@@ -71,7 +71,7 @@
       "period": 2,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Lithium",
-      "spectral_img": "https://en.wikipedia.org/wiki/Lithium#/media/File:Lithium_paraffin.jpg",
+      "spectral_img": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Lithium_paraffin.jpg",
       "summary": "Lithium (from Greek:λίθος lithos, \"stone\") is a chemical element with the symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element.",
       "symbol": "Li",
       "xpos": 1,
@@ -87,7 +87,7 @@
     {
       "name": "Beryllium",
       "appearance": "white-gray metallic",
-      "atomic_mass": 9.01218315,
+      "atomic_mass": "9.01218315 g/mol",
       "boil": 2742,
       "category": "alkaline earth metal",
       "density": 1.85,
@@ -99,7 +99,7 @@
       "period": 2,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Beryllium",
-      "spectral_img": "https://en.wikipedia.org/wiki/Beryllium#/media/File:Be-140g.jpg",
+      "spectral_img": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Be-140g.jpg",
       "summary": "Beryllium is a chemical element with symbol Be and atomic number 4. It is created through stellar nucleosynthesis and is a relatively rare element in the universe. It is a divalent element which occurs naturally only in combination with other elements in minerals.",
       "symbol": "Be",
       "xpos": 2,
@@ -115,7 +115,7 @@
     {
       "name": "Boron",
       "appearance": "black-brown",
-      "atomic_mass": 10.81,
+      "atomic_mass": "10.81 g/mol",
       "boil": 4200,
       "category": "metalloid",
       "density": 2.08,
@@ -127,7 +127,7 @@
       "period": 2,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Boron",
-      "spectral_img": "https://en.wikipedia.org/wiki/Boron#/media/File:Boron_R105.jpg",
+      "spectral_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Boron_R105.jpg/1024px-Boron_R105.jpg",
       "summary": "Boron is a metalloid chemical element with symbol B and atomic number 5. Produced entirely by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a low-abundance element in both the Solar system and the Earth's crust. Boron is concentrated on Earth by the water-solubility of its more common naturally occurring compounds, the borate minerals.",
       "symbol": "B",
       "xpos": 13,
@@ -143,7 +143,7 @@
     {
       "name": "Carbon",
       "appearance": null,
-      "atomic_mass": 12.011,
+      "atomic_mass": "12.011 g/mol",
       "boil": null,
       "category": "polyatomic-nonmetal",
       "density": 1.821,
@@ -155,7 +155,7 @@
       "period": 2,
       "phase": "Solid",
       "source": "https://en.wikipedia.org/wiki/Carbon",
-      "spectral_img": "https://en.wikipedia.org/wiki/File:Carbon_Spectra.jpg",
+      "spectral_img": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Graphite-and-diamond-with-scale.jpg",
       "summary": "Carbon (from Latin:carbo \"coal\") is a chemical element with symbol C and atomic number 6. On the periodic table, it is the first (row 2) of six elements in column (group) 14, which have in common the composition of their outer electron shell. It is nonmetallic and tetravalent—making four electrons available to form covalent chemical bonds.",
       "symbol": "C",
       "xpos": 14,
@@ -171,7 +171,7 @@
     {
       "name": "Nitrogen",
       "appearance": "colorless gas, liquid or solid",
-      "atomic_mass": 14.007,
+      "atomic_mass": "14.007 g/mol",
       "boil": 77.355,
       "category": "diatomic-nonmetal",
       "density": 1.251,
@@ -183,7 +183,7 @@
       "period": 2,
       "phase": "Gas",
       "source": "https://en.wikipedia.org/wiki/Nitrogen",
-      "spectral_img": "https://en.wikipedia.org/wiki/File:Nitrogen_Spectra.jpg",
+      "spectral_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Liquidnitrogen.jpg/1024px-Liquidnitrogen.jpg",
       "summary": "Nitrogen is a chemical element with symbol N and atomic number 7. It is the lightest pnictogen and at room temperature, it is a transparent, odorless diatomic gas. Nitrogen is a common element in the universe, estimated at about seventh in total abundance in the Milky Way and the Solar System.",
       "symbol": "N",
       "xpos": 15,
@@ -207,7 +207,7 @@
     {
       "name": "Oxygen",
       "appearance": null,
-      "atomic_mass": 15.999,
+      "atomic_mass": "15.999 g/mol",
       "boil": 90.188,
       "category": "diatomic-nonmetal",
       "density": 1.429,
@@ -244,7 +244,7 @@
     {
       "name": "Fluorine",
       "appearance": null,
-      "atomic_mass": 18.9984031636,
+      "atomic_mass": "18.9984031636 g/mol",
       "boil": 85.03,
       "category": "diatomic-nonmetal",
       "density": 1.696,
@@ -282,7 +282,7 @@
     {
       "name": "Neon",
       "appearance": "colorless gas exhibiting an orange-red glow when placed in a high voltage electric field",
-      "atomic_mass": 20.17976,
+      "atomic_mass": "20.17976 g/mol",
       "boil": 27.104,
       "category": "noble-gas",
       "density": 0.9002,
@@ -321,7 +321,7 @@
     {
       "name": "Sodium",
       "appearance": "silvery white metallic",
-      "atomic_mass": 22.989769282,
+      "atomic_mass": "22.989769282 g/mol",
       "boil": 1156.09,
       "category": "alkali-metal",
       "density": 0.968,
@@ -361,7 +361,7 @@
     {
       "name": "Magnesium",
       "appearance": "shiny grey solid",
-      "atomic_mass": 24.305,
+      "atomic_mass": "24.305 g/mol",
       "boil": 1363,
       "category": "alkaline earth metal",
       "density": 1.738,
@@ -402,7 +402,7 @@
     {
       "name": "Aluminium",
       "appearance": "silvery gray metallic",
-      "atomic_mass": 26.98153857,
+      "atomic_mass": "26.98153857 g/mol",
       "boil": 2743,
       "category": "post-transition-metal",
       "density": 2.7,
@@ -444,7 +444,7 @@
     {
       "name": "Silicon",
       "appearance": "crystalline, reflective with bluish-tinged faces",
-      "atomic_mass": 28.085,
+      "atomic_mass": "28.085 g/mol",
       "boil": 3538,
       "category": "metalloid",
       "density": 2.329,
@@ -487,7 +487,7 @@
     {
       "name": "Phosphorus",
       "appearance": "colourless, waxy white, yellow, scarlet, red, violet, black",
-      "atomic_mass": 30.9737619985,
+      "atomic_mass": "30.9737619985 g/mol",
       "boil": null,
       "category": "polyatomic-nonmetal",
       "density": 1.823,
@@ -531,7 +531,7 @@
     {
       "name": "Sulfur",
       "appearance": "lemon yellow sintered microcrystals",
-      "atomic_mass": 32.06,
+      "atomic_mass": "32.06 g/mol",
       "boil": 717.8,
       "category": "polyatomic-nonmetal",
       "density": 2.07,
@@ -576,7 +576,7 @@
     {
       "name": "Chlorine",
       "appearance": "pale yellow-green gas",
-      "atomic_mass": 35.45,
+      "atomic_mass": "35.45 g/mol",
       "boil": 239.11,
       "category": "diatomic-nonmetal",
       "density": 3.2,
@@ -622,7 +622,7 @@
     {
       "name": "Argon",
       "appearance": "colorless gas exhibiting a lilac/violet glow when placed in a high voltage electric field",
-      "atomic_mass": 39.9481,
+      "atomic_mass": "39.9481 g/mol",
       "boil": 87.302,
       "category": "noble-gas",
       "density": 1.784,
@@ -669,7 +669,7 @@
     {
       "name": "Potassium",
       "appearance": "silvery gray",
-      "atomic_mass": 39.09831,
+      "atomic_mass": "39.09831 g/mol",
       "boil": 1032,
       "category": "alkali-metal",
       "density": 0.862,
@@ -717,7 +717,7 @@
     {
       "name": "Calcium",
       "appearance": null,
-      "atomic_mass": 40.0784,
+      "atomic_mass": "40.0784 g/mol",
       "boil": 1757,
       "category": "alkaline earth metal",
       "density": 1.55,
@@ -766,7 +766,7 @@
     {
       "name": "Scandium",
       "appearance": "silvery white",
-      "atomic_mass": 44.9559085,
+      "atomic_mass": "44.9559085 g/mol",
       "boil": 3109,
       "category": "transition-metal",
       "density": 2.985,
@@ -816,7 +816,7 @@
     {
       "name": "Titanium",
       "appearance": "silvery grey-white metallic",
-      "atomic_mass": 47.8671,
+      "atomic_mass": "47.8671 g/mol",
       "boil": 3560,
       "category": "transition-metal",
       "density": 4.506,
@@ -867,7 +867,7 @@
     {
       "name": "Vanadium",
       "appearance": "blue-silver-grey metal",
-      "atomic_mass": 50.94151,
+      "atomic_mass": "50.94151 g/mol",
       "boil": 3680,
       "category": "transition-metal",
       "density": 6,
@@ -919,7 +919,7 @@
     {
       "name": "Chromium",
       "appearance": "silvery metallic",
-      "atomic_mass": 51.99616,
+      "atomic_mass": "51.99616 g/mol",
       "boil": 2944,
       "category": "transition-metal",
       "density": 7.19,
@@ -972,7 +972,7 @@
     {
       "name": "Manganese",
       "appearance": "silvery metallic",
-      "atomic_mass": 54.9380443,
+      "atomic_mass": "54.9380443 g/mol",
       "boil": 2334,
       "category": "transition-metal",
       "density": 7.21,
@@ -1026,7 +1026,7 @@
     {
       "name": "Iron",
       "appearance": "lustrous metallic with a grayish tinge",
-      "atomic_mass": 55.8452,
+      "atomic_mass": "55.8452 g/mol",
       "boil": 3134,
       "category": "transition-metal",
       "density": 7.874,
@@ -1081,7 +1081,7 @@
     {
       "name": "Cobalt",
       "appearance": "hard lustrous gray metal",
-      "atomic_mass": 58.9331944,
+      "atomic_mass": "58.9331944 g/mol",
       "boil": 3200,
       "category": "transition-metal",
       "density": 8.9,
@@ -1137,7 +1137,7 @@
     {
       "name": "Nickel",
       "appearance": "lustrous, metallic, and silver with a gold tinge",
-      "atomic_mass": 58.69344,
+      "atomic_mass": "58.69344 g/mol",
       "boil": 3003,
       "category": "transition-metal",
       "density": 8.908,
@@ -1194,7 +1194,7 @@
     {
       "name": "Copper",
       "appearance": "red-orange metallic luster",
-      "atomic_mass": 63.5463,
+      "atomic_mass": "63.5463 g/mol",
       "boil": 2835,
       "category": "transition-metal",
       "density": 8.96,
@@ -1252,7 +1252,7 @@
     {
       "name": "Zinc",
       "appearance": "silver-gray",
-      "atomic_mass": 65.382,
+      "atomic_mass": "65.382 g/mol",
       "boil": 1180,
       "category": "transition-metal",
       "density": 7.14,
@@ -1302,7 +1302,7 @@
     {
       "name": "Gallium",
       "appearance": "silver-white",
-      "atomic_mass": 69.7231,
+      "atomic_mass": "69.7231 g/mol",
       "boil": 2673,
       "category": "post-transition-metal",
       "density": 5.91,
@@ -1330,7 +1330,7 @@
     {
       "name": "Germanium",
       "appearance": "grayish-white",
-      "atomic_mass": 72.6308,
+      "atomic_mass": "72.6308 g/mol",
       "boil": 3106,
       "category": "metalloid",
       "density": 5.323,
@@ -1358,7 +1358,7 @@
     {
       "name": "Arsenic",
       "appearance": "metallic grey",
-      "atomic_mass": 74.9215956,
+      "atomic_mass": "74.9215956 g/mol",
       "boil": null,
       "category": "metalloid",
       "density": 5.727,
@@ -1386,7 +1386,7 @@
     {
       "name": "Selenium",
       "appearance": "black, red, and gray (not pictured) allotropes",
-      "atomic_mass": 78.9718,
+      "atomic_mass": "78.9718 g/mol",
       "boil": 958,
       "category": "polyatomic-nonmetal",
       "density": 4.81,
@@ -1414,7 +1414,7 @@
     {
       "name": "Bromine",
       "appearance": null,
-      "atomic_mass": 79.904,
+      "atomic_mass": "79.904 g/mol",
       "boil": 332,
       "category": "diatomic-nonmetal",
       "density": 3.1028,
@@ -1451,7 +1451,7 @@
     {
       "name": "Krypton",
       "appearance": "colorless gas, exhibiting a whitish glow in a high electric field",
-      "atomic_mass": 83.7982,
+      "atomic_mass": "83.7982 g/mol",
       "boil": 119.93,
       "category": "noble-gas",
       "density": 3.749,
@@ -1510,7 +1510,7 @@
     {
       "name": "Rubidium",
       "appearance": "grey white",
-      "atomic_mass": 85.46783,
+      "atomic_mass": "85.46783 g/mol",
       "boil": 961,
       "category": "alkali-metal",
       "density": 1.532,
@@ -1549,7 +1549,7 @@
     {
       "name": "Strontium",
       "appearance": null,
-      "atomic_mass": 87.621,
+      "atomic_mass": "87.621 g/mol",
       "boil": 1650,
       "category": "alkaline earth metal",
       "density": 2.64,
@@ -1589,7 +1589,7 @@
     {
       "name": "Yttrium",
       "appearance": "silvery white",
-      "atomic_mass": 88.905842,
+      "atomic_mass": "88.905842 g/mol",
       "boil": 3203,
       "category": "transition-metal",
       "density": 4.472,
@@ -1630,7 +1630,7 @@
     {
       "name": "Zirconium",
       "appearance": "silvery white",
-      "atomic_mass": 91.2242,
+      "atomic_mass": "91.2242 g/mol",
       "boil": 4650,
       "category": "transition-metal",
       "density": 6.52,
@@ -1658,7 +1658,7 @@
     {
       "name": "Niobium",
       "appearance": "gray metallic, bluish when oxidized",
-      "atomic_mass": 92.906372,
+      "atomic_mass": "92.906372 g/mol",
       "boil": 5017,
       "category": "transition-metal",
       "density": 8.57,
@@ -1686,7 +1686,7 @@
     {
       "name": "Molybdenum",
       "appearance": "gray metallic",
-      "atomic_mass": 95.951,
+      "atomic_mass": "95.951 g/mol",
       "boil": 4912,
       "category": "transition-metal",
       "density": 10.28,
@@ -1745,7 +1745,7 @@
     {
       "name": "Technetium",
       "appearance": "shiny gray metal",
-      "atomic_mass": 98,
+      "atomic_mass": "98 g/mol",
       "boil": 4538,
       "category": "transition-metal",
       "density": 11,
@@ -1773,7 +1773,7 @@
     {
       "name": "Ruthenium",
       "appearance": "silvery white metallic",
-      "atomic_mass": 101.072,
+      "atomic_mass": "101.072 g/mol",
       "boil": 4423,
       "category": "transition-metal",
       "density": 12.45,
@@ -1801,7 +1801,7 @@
     {
       "name": "Rhodium",
       "appearance": "silvery white metallic",
-      "atomic_mass": 102.905502,
+      "atomic_mass": "102.905502 g/mol",
       "boil": 3968,
       "category": "transition-metal",
       "density": 12.41,
@@ -1829,7 +1829,7 @@
     {
       "name": "Palladium",
       "appearance": "silvery white",
-      "atomic_mass": 106.421,
+      "atomic_mass": "106.421 g/mol",
       "boil": 3236,
       "category": "transition-metal",
       "density": 12.023,
@@ -1857,7 +1857,7 @@
     {
       "name": "Silver",
       "appearance": "lustrous white metal",
-      "atomic_mass": 107.86822,
+      "atomic_mass": "107.86822 g/mol",
       "boil": 2435,
       "category": "transition-metal",
       "density": 10.49,
@@ -1885,7 +1885,7 @@
     {
       "name": "Cadmium",
       "appearance": "silvery bluish-gray metallic",
-      "atomic_mass": 112.4144,
+      "atomic_mass": "112.4144 g/mol",
       "boil": 1040,
       "category": "transition-metal",
       "density": 8.65,
@@ -1913,7 +1913,7 @@
     {
       "name": "Indium",
       "appearance": "silvery lustrous gray",
-      "atomic_mass": 114.8181,
+      "atomic_mass": "114.8181 g/mol",
       "boil": 2345,
       "category": "post-transition-metal",
       "density": 7.31,
@@ -1941,7 +1941,7 @@
     {
       "name": "Tin",
       "appearance": "silvery-white (beta, β) or gray (alpha, α)",
-      "atomic_mass": 118.7107,
+      "atomic_mass": "118.7107 g/mol",
       "boil": 2875,
       "category": "post-transition-metal",
       "density": 7.365,
@@ -1969,7 +1969,7 @@
     {
       "name": "Antimony",
       "appearance": "silvery lustrous gray",
-      "atomic_mass": 121.7601,
+      "atomic_mass": "121.7601 g/mol",
       "boil": 1908,
       "category": "metalloid",
       "density": 6.697,
@@ -1997,7 +1997,7 @@
     {
       "name": "Tellurium",
       "appearance": null,
-      "atomic_mass": 127.603,
+      "atomic_mass": "127.603 g/mol",
       "boil": 1261,
       "category": "metalloid",
       "density": 6.24,
@@ -2025,7 +2025,7 @@
     {
       "name": "Iodine",
       "appearance": "lustrous metallic gray, violet as a gas",
-      "atomic_mass": 126.904473,
+      "atomic_mass": "126.904473 g/mol",
       "boil": 457.4,
       "category": "diatomic-nonmetal",
       "density": 4.933,
@@ -2053,7 +2053,7 @@
     {
       "name": "Xenon",
       "appearance": "colorless gas, exhibiting a blue glow when placed in a high voltage electric field",
-      "atomic_mass": 131.2936,
+      "atomic_mass": "131.2936 g/mol",
       "boil": 165.051,
       "category": "noble-gas",
       "density": 5.894,
@@ -2081,7 +2081,7 @@
     {
       "name": "Cesium",
       "appearance": "silvery gold",
-      "atomic_mass": 132.905451966,
+      "atomic_mass": "132.905451966 g/mol",
       "boil": 944,
       "category": "alkali-metal",
       "density": 1.93,
@@ -2109,7 +2109,7 @@
     {
       "name": "Barium",
       "appearance": null,
-      "atomic_mass": 137.3277,
+      "atomic_mass": "137.3277 g/mol",
       "boil": 2118,
       "category": "alkaline earth metal",
       "density": 3.51,
@@ -2137,7 +2137,7 @@
     {
       "name": "Lanthanum",
       "appearance": "silvery white",
-      "atomic_mass": 138.905477,
+      "atomic_mass": "138.905477 g/mol",
       "boil": 3737,
       "category": "lanthanide",
       "density": 6.162,
@@ -2165,7 +2165,7 @@
     {
       "name": "Cerium",
       "appearance": "silvery white",
-      "atomic_mass": 140.1161,
+      "atomic_mass": "140.1161 g/mol",
       "boil": 3716,
       "category": "lanthanide",
       "density": 6.77,
@@ -2193,7 +2193,7 @@
     {
       "name": "Praseodymium",
       "appearance": "grayish white",
-      "atomic_mass": 140.907662,
+      "atomic_mass": "140.907662 g/mol",
       "boil": 3403,
       "category": "lanthanide",
       "density": 6.77,
@@ -2221,7 +2221,7 @@
     {
       "name": "Neodymium",
       "appearance": "silvery white",
-      "atomic_mass": 144.2423,
+      "atomic_mass": "144.2423 g/mol",
       "boil": 3347,
       "category": "lanthanide",
       "density": 7.01,
@@ -2249,7 +2249,7 @@
     {
       "name": "Promethium",
       "appearance": "metallic",
-      "atomic_mass": 145,
+      "atomic_mass": "145 g/mol",
       "boil": 3273,
       "category": "lanthanide",
       "density": 7.26,
@@ -2277,7 +2277,7 @@
     {
       "name": "Samarium",
       "appearance": "silvery white",
-      "atomic_mass": 150.362,
+      "atomic_mass": "150.362 g/mol",
       "boil": 2173,
       "category": "lanthanide",
       "density": 7.52,
@@ -2305,7 +2305,7 @@
     {
       "name": "Europium",
       "appearance": null,
-      "atomic_mass": 151.9641,
+      "atomic_mass": "151.9641 g/mol",
       "boil": 1802,
       "category": "lanthanide",
       "density": 5.264,
@@ -2333,7 +2333,7 @@
     {
       "name": "Gadolinium",
       "appearance": "silvery white",
-      "atomic_mass": 157.253,
+      "atomic_mass": "157.253 g/mol",
       "boil": 3273,
       "category": "lanthanide",
       "density": 7.9,
@@ -2361,7 +2361,7 @@
     {
       "name": "Terbium",
       "appearance": "silvery white",
-      "atomic_mass": 158.925352,
+      "atomic_mass": "158.925352 g/mol",
       "boil": 3396,
       "category": "lanthanide",
       "density": 8.23,
@@ -2389,7 +2389,7 @@
     {
       "name": "Dysprosium",
       "appearance": "silvery white",
-      "atomic_mass": 162.5001,
+      "atomic_mass": "162.5001 g/mol",
       "boil": 2840,
       "category": "lanthanide",
       "density": 8.54,
@@ -2417,7 +2417,7 @@
     {
       "name": "Holmium",
       "appearance": "silvery white",
-      "atomic_mass": 164.930332,
+      "atomic_mass": "164.930332 g/mol",
       "boil": 2873,
       "category": "lanthanide",
       "density": 8.79,
@@ -2445,7 +2445,7 @@
     {
       "name": "Erbium",
       "appearance": "silvery white",
-      "atomic_mass": 167.2593,
+      "atomic_mass": "167.2593 g/mol",
       "boil": 3141,
       "category": "lanthanide",
       "density": 9.066,
@@ -2473,7 +2473,7 @@
     {
       "name": "Thulium",
       "appearance": "silvery gray",
-      "atomic_mass": 168.934222,
+      "atomic_mass": "168.934222 g/mol",
       "boil": 2223,
       "category": "lanthanide",
       "density": 9.32,
@@ -2501,7 +2501,7 @@
     {
       "name": "Ytterbium",
       "appearance": null,
-      "atomic_mass": 173.0451,
+      "atomic_mass": "173.0451 g/mol",
       "boil": 1469,
       "category": "lanthanide",
       "density": 6.9,
@@ -2529,7 +2529,7 @@
     {
       "name": "Lutetium",
       "appearance": "silvery white",
-      "atomic_mass": 174.96681,
+      "atomic_mass": "174.96681 g/mol",
       "boil": 3675,
       "category": "lanthanide",
       "density": 9.841,
@@ -2557,7 +2557,7 @@
     {
       "name": "Hafnium",
       "appearance": "steel gray",
-      "atomic_mass": 178.492,
+      "atomic_mass": "178.492 g/mol",
       "boil": 4876,
       "category": "transition-metal",
       "density": 13.31,
@@ -2585,7 +2585,7 @@
     {
       "name": "Tantalum",
       "appearance": "gray blue",
-      "atomic_mass": 180.947882,
+      "atomic_mass": "180.947882 g/mol",
       "boil": 5731,
       "category": "transition-metal",
       "density": 16.69,
@@ -2613,7 +2613,7 @@
     {
       "name": "Tungsten",
       "appearance": "grayish white, lustrous",
-      "atomic_mass": 183.841,
+      "atomic_mass": "183.841 g/mol",
       "boil": 6203,
       "category": "transition-metal",
       "density": 19.25,
@@ -2641,7 +2641,7 @@
     {
       "name": "Rhenium",
       "appearance": "silvery-grayish",
-      "atomic_mass": 186.2071,
+      "atomic_mass": "186.2071 g/mol",
       "boil": 5869,
       "category": "transition-metal",
       "density": 21.02,
@@ -2669,7 +2669,7 @@
     {
       "name": "Osmium",
       "appearance": "silvery, blue cast",
-      "atomic_mass": 190.233,
+      "atomic_mass": "190.233 g/mol",
       "boil": 5285,
       "category": "transition-metal",
       "density": 22.59,
@@ -2697,7 +2697,7 @@
     {
       "name": "Iridium",
       "appearance": "silvery white",
-      "atomic_mass": 192.2173,
+      "atomic_mass": "192.2173 g/mol",
       "boil": 4403,
       "category": "transition-metal",
       "density": 22.56,
@@ -2725,7 +2725,7 @@
     {
       "name": "Platinum",
       "appearance": "silvery white",
-      "atomic_mass": 195.0849,
+      "atomic_mass": "195.0849 g/mol",
       "boil": 4098,
       "category": "transition-metal",
       "density": 21.45,
@@ -2753,7 +2753,7 @@
     {
       "name": "Gold",
       "appearance": "metallic yellow",
-      "atomic_mass": 196.9665695,
+      "atomic_mass": "196.9665695 g/mol",
       "boil": 3243,
       "category": "transition-metal",
       "density": 19.3,
@@ -2781,7 +2781,7 @@
     {
       "name": "Mercury",
       "appearance": "silvery",
-      "atomic_mass": 200.5923,
+      "atomic_mass": "200.5923 g/mol",
       "boil": 629.88,
       "category": "transition-metal",
       "density": 13.534,
@@ -2809,7 +2809,7 @@
     {
       "name": "Thallium",
       "appearance": "silvery white",
-      "atomic_mass": 204.38,
+      "atomic_mass": "204.38 g/mol",
       "boil": 1746,
       "category": "post-transition-metal",
       "density": 11.85,
@@ -2837,7 +2837,7 @@
     {
       "name": "Lead",
       "appearance": "metallic gray",
-      "atomic_mass": 207.21,
+      "atomic_mass": "207.21 g/mol",
       "boil": 2022,
       "category": "post-transition-metal",
       "density": 11.34,
@@ -2865,7 +2865,7 @@
     {
       "name": "Bismuth",
       "appearance": "lustrous silver",
-      "atomic_mass": 208.980401,
+      "atomic_mass": "208.980401 g/mol",
       "boil": 1837,
       "category": "post-transition-metal",
       "density": 9.78,
@@ -2893,7 +2893,7 @@
     {
       "name": "Polonium",
       "appearance": "silvery",
-      "atomic_mass": 209,
+      "atomic_mass": "209 g/mol",
       "boil": 1235,
       "category": "post-transition-metal",
       "density": 9.196,
@@ -2921,7 +2921,7 @@
     {
       "name": "Astatine",
       "appearance": "unknown, probably metallic",
-      "atomic_mass": 210,
+      "atomic_mass": "210 g/mol",
       "boil": 610,
       "category": "metalloid",
       "density": 6.35,
@@ -2949,7 +2949,7 @@
     {
       "name": "Radon",
       "appearance": "colorless gas, occasionally glows green or red in discharge tubes",
-      "atomic_mass": 222,
+      "atomic_mass": "222 g/mol",
       "boil": 211.5,
       "category": "noble-gas",
       "density": 9.73,
@@ -2977,7 +2977,7 @@
     {
       "name": "Francium",
       "appearance": null,
-      "atomic_mass": 223,
+      "atomic_mass": "223 g/mol",
       "boil": 950,
       "category": "alkali-metal",
       "density": 1.87,
@@ -3005,7 +3005,7 @@
     {
       "name": "Radium",
       "appearance": "silvery white metallic",
-      "atomic_mass": 226,
+      "atomic_mass": "226 g/mol",
       "boil": 2010,
       "category": "alkaline earth metal",
       "density": 5.5,
@@ -3033,7 +3033,7 @@
     {
       "name": "Actinium",
       "appearance": null,
-      "atomic_mass": 227,
+      "atomic_mass": "227 g/mol",
       "boil": 3500,
       "category": "actinide",
       "density": 10,
@@ -3061,7 +3061,7 @@
     {
       "name": "Thorium",
       "appearance": "silvery, often with black tarnish",
-      "atomic_mass": 232.03774,
+      "atomic_mass": "232.03774 g/mol",
       "boil": 5061,
       "category": "actinide",
       "density": 11.724,
@@ -3089,7 +3089,7 @@
     {
       "name": "Protactinium",
       "appearance": "bright, silvery metallic luster",
-      "atomic_mass": 231.035882,
+      "atomic_mass": "231.035882 g/mol",
       "boil": 4300,
       "category": "actinide",
       "density": 15.37,
@@ -3117,7 +3117,7 @@
     {
       "name": "Uranium",
       "appearance": null,
-      "atomic_mass": 238.028913,
+      "atomic_mass": "238.028913 g/mol",
       "boil": 4404,
       "category": "actinide",
       "density": 19.1,
@@ -3145,7 +3145,7 @@
     {
       "name": "Neptunium",
       "appearance": "silvery metallic",
-      "atomic_mass": 237,
+      "atomic_mass": "237 g/mol",
       "boil": 4447,
       "category": "actinide",
       "density": 20.45,
@@ -3173,7 +3173,7 @@
     {
       "name": "Plutonium",
       "appearance": "silvery white, tarnishing to dark gray in air",
-      "atomic_mass": 244,
+      "atomic_mass": "244 g/mol",
       "boil": 3505,
       "category": "actinide",
       "density": 19.816,
@@ -3201,7 +3201,7 @@
     {
       "name": "Americium",
       "appearance": "silvery white",
-      "atomic_mass": 243,
+      "atomic_mass": "243 g/mol",
       "boil": 2880,
       "category": "actinide",
       "density": 12,
@@ -3229,7 +3229,7 @@
     {
       "name": "Curium",
       "appearance": "silvery metallic, glows purple in the dark",
-      "atomic_mass": 247,
+      "atomic_mass": "247 g/mol",
       "boil": 3383,
       "category": "actinide",
       "density": 13.51,
@@ -3257,7 +3257,7 @@
     {
       "name": "Berkelium",
       "appearance": "silvery",
-      "atomic_mass": 247,
+      "atomic_mass": "247 g/mol",
       "boil": 2900,
       "category": "actinide",
       "density": 14.78,
@@ -3285,7 +3285,7 @@
     {
       "name": "Californium",
       "appearance": "silvery",
-      "atomic_mass": 251,
+      "atomic_mass": "251 g/mol",
       "boil": 1743,
       "category": "actinide",
       "density": 15.1,
@@ -3313,7 +3313,7 @@
     {
       "name": "Einsteinium",
       "appearance": "silver-colored",
-      "atomic_mass": 252,
+      "atomic_mass": "252 g/mol",
       "boil": 1269,
       "category": "actinide",
       "density": 8.84,
@@ -3341,7 +3341,7 @@
     {
       "name": "Fermium",
       "appearance": null,
-      "atomic_mass": 257,
+      "atomic_mass": "257 g/mol",
       "boil": null,
       "category": "actinide",
       "density": null,
@@ -3369,7 +3369,7 @@
     {
       "name": "Mendelevium",
       "appearance": null,
-      "atomic_mass": 258,
+      "atomic_mass": "258 g/mol",
       "boil": null,
       "category": "actinide",
       "density": null,
@@ -3397,7 +3397,7 @@
     {
       "name": "Nobelium",
       "appearance": null,
-      "atomic_mass": 259,
+      "atomic_mass": "259 g/mol",
       "boil": null,
       "category": "actinide",
       "density": null,
@@ -3425,7 +3425,7 @@
     {
       "name": "Lawrencium",
       "appearance": null,
-      "atomic_mass": 266,
+      "atomic_mass": "266 g/mol",
       "boil": null,
       "category": "actinide",
       "density": null,
@@ -3453,7 +3453,7 @@
     {
       "name": "Rutherfordium",
       "appearance": null,
-      "atomic_mass": 267,
+      "atomic_mass": "267 g/mol",
       "boil": 5800,
       "category": "transition-metal",
       "density": 23.2,
@@ -3481,7 +3481,7 @@
     {
       "name": "Dubnium",
       "appearance": null,
-      "atomic_mass": 268,
+      "atomic_mass": "268 g/mol",
       "boil": null,
       "category": "transition-metal",
       "density": 29.3,
@@ -3509,7 +3509,7 @@
     {
       "name": "Seaborgium",
       "appearance": null,
-      "atomic_mass": 269,
+      "atomic_mass": "269 g/mol",
       "boil": null,
       "category": "transition-metal",
       "density": 35,
@@ -3537,7 +3537,7 @@
     {
       "name": "Bohrium",
       "appearance": null,
-      "atomic_mass": 270,
+      "atomic_mass": "270 g/mol",
       "boil": null,
       "category": "transition-metal",
       "density": 37.1,
@@ -3565,7 +3565,7 @@
     {
       "name": "Hassium",
       "appearance": null,
-      "atomic_mass": 269,
+      "atomic_mass": "269 g/mol",
       "boil": null,
       "category": "transition-metal",
       "density": 40.7,
@@ -3593,7 +3593,7 @@
     {
       "name": "Meitnerium",
       "appearance": null,
-      "atomic_mass": 278,
+      "atomic_mass": "278 g/mol",
       "boil": null,
       "category": "transition-metal",
       "density": 37.4,
@@ -3621,7 +3621,7 @@
     {
       "name": "Darmstadtium",
       "appearance": null,
-      "atomic_mass": 281,
+      "atomic_mass": "281 g/mol",
       "boil": null,
       "category": "transition-metal",
       "density": 34.8,
@@ -3649,7 +3649,7 @@
     {
       "name": "Roentgenium",
       "appearance": null,
-      "atomic_mass": 282,
+      "atomic_mass": "282 g/mol",
       "boil": null,
       "category": "transition-metal",
       "density": 28.7,
@@ -3677,7 +3677,7 @@
     {
       "name": "Copernicium",
       "appearance": null,
-      "atomic_mass": 285,
+      "atomic_mass": "285 g/mol",
       "boil": 3570,
       "category": "transition-metal",
       "density": 23.7,
@@ -3705,7 +3705,7 @@
     {
       "name": "Nihonium",
       "appearance": null,
-      "atomic_mass": 286,
+      "atomic_mass": "286 g/mol",
       "boil": 1430,
       "category": "transition-metal",
       "density": 16,
@@ -3733,7 +3733,7 @@
     {
       "name": "Flerovium",
       "appearance": null,
-      "atomic_mass": 289,
+      "atomic_mass": "289 g/mol",
       "boil": 420,
       "category": "post-transition-metal",
       "density": 14,
@@ -3761,7 +3761,7 @@
     {
       "name": "Moscovium",
       "appearance": null,
-      "atomic_mass": 289,
+      "atomic_mass": "289 g/mol",
       "boil": 1400,
       "category": "post-transition-metal",
       "density": 13.5,
@@ -3789,7 +3789,7 @@
     {
       "name": "Livermorium",
       "appearance": null,
-      "atomic_mass": 293,
+      "atomic_mass": "293 g/mol",
       "boil": 1085,
       "category": "post-transition-metal",
       "density": 12.9,
@@ -3817,7 +3817,7 @@
     {
       "name": "Tennessine",
       "appearance": null,
-      "atomic_mass": 294,
+      "atomic_mass": "294 g/mol",
       "boil": 883,
       "category": "metalloid",
       "density": 7.17,
@@ -3845,7 +3845,7 @@
     {
       "name": "Oganesson",
       "appearance": null,
-      "atomic_mass": 294,
+      "atomic_mass": "294 g/mol",
       "boil": 350,
       "category": "noble-gas",
       "density": 4.95,
@@ -3873,7 +3873,7 @@
     {
       "name": "Ununennium",
       "appearance": null,
-      "atomic_mass": 315,
+      "atomic_mass": "315 g/mol",
       "boil": 630,
       "category": "alkali-metal",
       "density": 3,
