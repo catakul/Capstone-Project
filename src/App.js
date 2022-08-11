@@ -33,8 +33,6 @@ const StyledNavbar = styled.nav`
   width: 100vw;
   top: -20px;
   left: -20px;
-  right: -20px;
-  /* right does not work. .. */
   margin: 20px;
   position: fixed;
   background-color: #333;
