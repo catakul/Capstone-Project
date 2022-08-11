@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-// import img from "./modal.jpg"
-// import { mdiWikipedia } from '@mdi/js';
 import {Icon} from '@iconify/react';
 
 export default function Modal({isOpen, onClose, content}) {
@@ -8,58 +6,58 @@ export default function Modal({isOpen, onClose, content}) {
   return (
     isOpen && (
       <>
-        <Styled_Outer_Modal>
-          <Styled_Inner_Modal>
-            <Styled_Close_Button type="button" onClick={onClose}>
+        <STYLED_OUTER_MODAL>
+          <STYLED_INNER_MODAL>
+            <STYLED_CLOSE_BUTTON type="button" onClick={onClose}>
               <Icon
                 icon="ant-design:close-square-outlined"
                 width="45"
                 height="45"
               />
-            </Styled_Close_Button>
-            <Styled_Wikipedia_Icon href={content.source}>
+            </STYLED_CLOSE_BUTTON>
+            <STYLED_WIKIPEDIA_ICON href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
-            </Styled_Wikipedia_Icon>
+            </STYLED_WIKIPEDIA_ICON>
 
             {/* images */}
-            <Styled_Image src={content.spectral_img}></Styled_Image>
+            <STYLED_IMAGE src={content.spectral_img}></STYLED_IMAGE>
 
-            <Styled_Element>
+            <STYLED_ELEMENT>
               <span>{content.symbol}</span>
-            </Styled_Element>
-            <Styled_Element_Name>
+            </STYLED_ELEMENT>
+            <STYLED_ELEMENT_NAME>
               <span>{content.name}</span>
-            </Styled_Element_Name>
-            <Styled_Atomic_Mass>
+            </STYLED_ELEMENT_NAME>
+            <STYLED_ATOMIC_MASS>
               <span>{content.atomic_mass}</span>
-            </Styled_Atomic_Mass>
+            </STYLED_ATOMIC_MASS>
 
-            <Styled_Span>
-              <Styled_Icon>
+            <STYLED_SPAN>
+              <STYLED_ICON>
                 <Icon icon="logos:react" width="35" height="35" />
                 <span>Overview</span>
-              </Styled_Icon>
-            </Styled_Span>
+              </STYLED_ICON>
+            </STYLED_SPAN>
 
-            <Styled_Informations>NAME: {content.name}</Styled_Informations>
-            <Styled_Informations>
+            <STYLED_INFORMATIONS>NAME: {content.name}</STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               ATOMIC MASS: {content.atomic_mass}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               NAMED BY: {content.named_by}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               CATEGORY: {content.category}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               DISCOVERED BY: {content.discovered_by}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               APPEARANCE: {content.appearance}
-            </Styled_Informations>
+            </STYLED_INFORMATIONS>
 
-            <Styled_Span>
-              <Styled_Icon>
+            <STYLED_SPAN>
+              <STYLED_ICON>
                 <Icon
                   icon="fontisto:laboratory"
                   color="red"
@@ -67,40 +65,40 @@ export default function Modal({isOpen, onClose, content}) {
                   height="32"
                 />
                 <span>Properties</span>
-              </Styled_Icon>
-            </Styled_Span>
+              </STYLED_ICON>
+            </STYLED_SPAN>
 
-            <Styled_Informations>
+            <STYLED_INFORMATIONS>
               BOILING POINT: {content.boil}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               MELTING POINT: {content.melt}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               DENSITY: {content.density}
-            </Styled_Informations>
-            <Styled_Informations>SOURCE: {content.source}</Styled_Informations>
-            <Styled_Informations>{content.molar_heat}</Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>SOURCE: {content.source}</STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>{content.molar_heat}</STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               ATOMIC NUMBER: {content.number}
-            </Styled_Informations>
-            <Styled_Informations>PERIOD: {content.period}</Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>PERIOD: {content.period}</STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               PHASE AT STP: {content.phase}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               SUMMARY: {content.summary}
-            </Styled_Informations>
-            <Styled_Informations>{content.shells}</Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>{content.shells}</STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               ELECTRONIC CONFIGURATION: {content.electron_configuration}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               {content.electron_configuration_semantic}
-            </Styled_Informations>
+            </STYLED_INFORMATIONS>
 
-            <Styled_Span>
-              <Styled_Icon>
+            <STYLED_SPAN>
+              <STYLED_ICON>
                 <Icon
                   icon="jam:triangle-danger"
                   color="red"
@@ -108,26 +106,26 @@ export default function Modal({isOpen, onClose, content}) {
                   height="35"
                 />
                 <span>Reactivity</span>
-              </Styled_Icon>
-            </Styled_Span>
+              </STYLED_ICON>
+            </STYLED_SPAN>
 
-            <Styled_Informations>
+            <STYLED_INFORMATIONS>
               ELECTRON AFFINITY: {content.electron_affinity}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               ELECTRONEGATIVITY: {content.electronegativity_pauling}
-            </Styled_Informations>
-            <Styled_Informations>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
               IONIZATION ENERGIES: {content.ionization_energies}
-            </Styled_Informations>
-          </Styled_Inner_Modal>
-        </Styled_Outer_Modal>
+            </STYLED_INFORMATIONS>
+          </STYLED_INNER_MODAL>
+        </STYLED_OUTER_MODAL>
       </>
     )
   );
 }
 
-const Styled_Outer_Modal = styled.div`
+const STYLED_OUTER_MODAL = styled.div`
   overflow: none;
   position: absolute;
   top: 0;
@@ -139,7 +137,7 @@ const Styled_Outer_Modal = styled.div`
   overflow-x: scroll;
 `;
 
-const Styled_Inner_Modal = styled.div`
+const STYLED_INNER_MODAL = styled.div`
   display: flex;
   text-align: center;
   flex-flow: column;
@@ -168,25 +166,25 @@ const Styled_Inner_Modal = styled.div`
   }
 `;
 
-const Styled_Informations = styled.div`
+const STYLED_INFORMATIONS = styled.div`
   background: #1c1f26;
   padding: 14px 15px;
   border-bottom: 1px solid hsla(0, 0%, 44.7%, 0.35);
 `;
 
-const Styled_Span = styled.span`
+const STYLED_SPAN = styled.span`
   background-color: blanchedalmond;
   padding: 14px 15px;
 `;
 
-const Styled_Icon = styled.div`
+const STYLED_ICON = styled.div`
   width: 130px;
   display: flex;
   justify-content: space-around;
   color: black;
 `;
 
-const Styled_Wikipedia_Icon = styled.a`
+const STYLED_WIKIPEDIA_ICON = styled.a`
   display: flex;
   justify-content: flex-start;
   color: white;
@@ -198,7 +196,7 @@ const Styled_Wikipedia_Icon = styled.a`
   //muss mittig gemacht werden
 `;
 
-const Styled_Close_Button = styled.button`
+const STYLED_CLOSE_BUTTON = styled.button`
   position: absolute;
   right: -4px;
   top: 3px;
@@ -213,31 +211,26 @@ const Styled_Close_Button = styled.button`
   }
 `;
 
-const Styled_Image = styled.img`
+const STYLED_IMAGE = styled.img`
   width: 56.9vh;
   height: 30vh;
   position: relative;
 `;
 
-const Styled_Line = styled.hr`
-  width: 100%;
-  border: 1px solid white;
-`;
-
-const Styled_Element = styled.text`
+const STYLED_ELEMENT = styled.text`
   font-size: 3.5rem;
   display: flex;
   justify-content: flex-start;
 `;
 
-const Styled_Element_Name = styled.text`
+const STYLED_ELEMENT_NAME = styled.text`
   font-size: 1.2rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
 `;
 
-const Styled_Atomic_Mass = styled.text`
+const STYLED_ATOMIC_MASS = styled.text`
   font-size: 1.2rem;
   font-weight: lighter;
   display: flex;

@@ -27,7 +27,6 @@ const PeriodicTable = () => {
     setIsOpen(true);
     setInfos(elementToFind);
   }
-  // console.log(infos);
 
   return (
     <>

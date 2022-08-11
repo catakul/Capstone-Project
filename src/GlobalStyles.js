@@ -18,10 +18,6 @@ export default styled.createGlobalStyle`
 
   main {
     margin-top: 65px;
-
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
   }
 
   button,
