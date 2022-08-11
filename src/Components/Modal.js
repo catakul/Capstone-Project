@@ -78,7 +78,9 @@ export default function Modal({isOpen, onClose, content, handleClick}) {
               DENSITY: {content.density}
             </Styled_Informations>
             <Styled_Informations>SOURCE: {content.source}</Styled_Informations>
-            <Styled_Informations>{content.molar_heat}</Styled_Informations>
+            <Styled_Informations>
+              MOLAR HEAT CAPACITY: {content.molar_heat}
+            </Styled_Informations>
             <Styled_Informations>
               ATOMIC NUMBER: {content.number}
             </Styled_Informations>
@@ -89,13 +91,15 @@ export default function Modal({isOpen, onClose, content, handleClick}) {
             <Styled_Informations>
               SUMMARY: {content.summary}
             </Styled_Informations>
-            <Styled_Informations>{content.shells}</Styled_Informations>
+            <Styled_Informations>
+              ELTRON SHELLS: {content.shells}
+            </Styled_Informations>
             <Styled_Informations>
               ELECTRONIC CONFIGURATION: {content.electron_configuration}
             </Styled_Informations>
-            <Styled_Informations>
+            {/* <Styled_Informations>
               {content.electron_configuration_semantic}
-            </Styled_Informations>
+            </Styled_Informations> */}
             <Styled_Span>
               <Styled_Icon>
                 <Icon
@@ -108,14 +112,14 @@ export default function Modal({isOpen, onClose, content, handleClick}) {
               </Styled_Icon>
             </Styled_Span>
             <Styled_Informations>
-              ELECTRON AFFINITY: {content.electron_affinity}
+              ELECTRON AFFINITY: {content.electron_affinity} kJ/mol
             </Styled_Informations>
             <Styled_Informations>
               ELECTRONEGATIVITY: {content.electronegativity_pauling}
             </Styled_Informations>
-            <Styled_Informations>
+            {/* <Styled_Informations>
               IONIZATION ENERGIES: {content.ionization_energies}
-            </Styled_Informations>
+            </Styled_Informations> */}
           </Styled_Inner_Modal>
         </Styled_Outer_Modal>
       </>
