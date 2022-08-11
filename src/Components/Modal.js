@@ -228,9 +228,6 @@ const STYLED_WIKIPEDIA_ICON = styled.a`
   text-decoration: none;
   padding-top: 7px;
   padding-left: 7px;
-  position: sticky; //funktioniert nicht....
-
-  //muss mittig gemacht werden
 `;
 
 const STYLED_CLOSE_BUTTON = styled.button`
