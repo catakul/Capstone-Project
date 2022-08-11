@@ -1,10 +1,8 @@
 import styled from 'styled-components';
-// import img from "./modal.jpg"
-// import { mdiWikipedia } from '@mdi/js';
 import {Icon} from '@iconify/react';
+import Navigation from '../Components/Navigation.js';
 
-export default function Modal({isOpen, onClose, content}) {
-  console.log(content);
+export default function Modal({isOpen, onClose, content, handleClick}) {
   return (
     isOpen && (
       <>
@@ -20,10 +18,8 @@ export default function Modal({isOpen, onClose, content}) {
             <Styled_Wikipedia_Icon href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
             </Styled_Wikipedia_Icon>
-
             {/* images */}
             <Styled_Image src={content.spectral_img}></Styled_Image>
-
             <Styled_Element>
               <span>{content.symbol}</span>
             </Styled_Element>
@@ -34,13 +30,17 @@ export default function Modal({isOpen, onClose, content}) {
               <span>{content.atomic_mass}</span>
             </Styled_Atomic_Mass>
 
+            <Navigation
+              handleClick={handleClick}
+              currentContentIndex={content.number}
+            />
+
             <Styled_Span>
               <Styled_Icon>
                 <Icon icon="logos:react" width="35" height="35" />
                 <span>Overview</span>
               </Styled_Icon>
             </Styled_Span>
-
             <Styled_Informations>NAME: {content.name}</Styled_Informations>
             <Styled_Informations>
               ATOMIC MASS: {content.atomic_mass}
@@ -57,7 +57,6 @@ export default function Modal({isOpen, onClose, content}) {
             <Styled_Informations>
               APPEARANCE: {content.appearance}
             </Styled_Informations>
-
             <Styled_Span>
               <Styled_Icon>
                 <Icon
@@ -69,7 +68,6 @@ export default function Modal({isOpen, onClose, content}) {
                 <span>Properties</span>
               </Styled_Icon>
             </Styled_Span>
-
             <Styled_Informations>
               BOILING POINT: {content.boil}
             </Styled_Informations>
@@ -98,7 +96,6 @@ export default function Modal({isOpen, onClose, content}) {
             <Styled_Informations>
               {content.electron_configuration_semantic}
             </Styled_Informations>
-
             <Styled_Span>
               <Styled_Icon>
                 <Icon
@@ -110,7 +107,6 @@ export default function Modal({isOpen, onClose, content}) {
                 <span>Reactivity</span>
               </Styled_Icon>
             </Styled_Span>
-
             <Styled_Informations>
               ELECTRON AFFINITY: {content.electron_affinity}
             </Styled_Informations>
