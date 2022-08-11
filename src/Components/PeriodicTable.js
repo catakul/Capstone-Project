@@ -27,7 +27,7 @@ const PeriodicTable = () => {
     setIsOpen(true);
     setInfos(elementToFind);
   }
-  console.log(infos);
+  // console.log(infos);
 
   return (
     <>
@@ -51,7 +51,7 @@ const PeriodicTable = () => {
           </button>
         ))}
       </div>
-      <Modal open={isOpen} onClose={() => setIsOpen(false)} content={infos} />
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} content={infos} />
     </>
   );
 };

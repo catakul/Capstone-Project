@@ -10,17 +10,18 @@ export default styled.createGlobalStyle`
 
   body {
     margin: 0;
-    padding: 0;
-    font-size: 1.125rem;
+    padding: 12px;
+    font-size: 0.75rem;
     font-family: sans-serif;
     text-align: center;
   }
 
   main {
-    padding: 32px;
-    display: flex;
+    margin-top: 65px;
+
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
   }
 
   button,
