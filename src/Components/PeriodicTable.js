@@ -20,7 +20,7 @@ const PeriodicTable = () => {
   const [infos, setInfos] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  function handleClick(elementNumber) {
+  function handleNavigate(elementNumber) {
     const elementToFind = data.elements.find(
       element => element.number === elementNumber
     );
@@ -34,7 +34,7 @@ const PeriodicTable = () => {
         {data.elements.map((element, index) => (
           <button
             type="button"
-            onClick={() => handleClick(element.number)}
+            onClick={() => handleNavigate(element.number)}
             data-propertiesid={element.number}
             className="element"
             key={index}
@@ -51,7 +51,7 @@ const PeriodicTable = () => {
         ))}
       </div>
       <Modal
-        handleClick={handleClick}
+        onNavigate={handleNavigate}
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         content={infos}

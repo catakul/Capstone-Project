@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 import data from '../PeriodicTableJSON.json';
 
-const Navigation = ({currentContentIndex, handleClick}) => {
+const Navigation = ({currentContentIndex, onNavigate}) => {
   const dataLeft = data.elements.find(
     data => data.number === currentContentIndex - 1
   );
@@ -18,21 +18,20 @@ const Navigation = ({currentContentIndex, handleClick}) => {
 
   return (
     <StyledDV>
-      <Styled_BUTTONS type="button" onClick={() => handleClick(idLeft)}>
-        <Icon icon="ant-design:arrow-left-outlined" />
-        {textLeft}
+      <Styled_BUTTONS type="button" onClick={() => onNavigate(idLeft)}>
+        <Icon icon="ant-design:arrow-left-outlined" width="14" />· {textLeft}
       </Styled_BUTTONS>
-      <Styled_BUTTONS type="button" onClick={() => handleClick(idRight)}>
-        {textRight}
-        <Icon icon="ant-design:arrow-right-outlined" />
+      <Styled_BUTTONS type="button" onClick={() => onNavigate(idRight)}>
+        {textRight} ·
+        <Icon icon="ant-design:arrow-right-outlined" width="14" />
       </Styled_BUTTONS>
     </StyledDV>
   );
 };
 
 const Styled_BUTTONS = styled.button`
-  font-size: 10px;
-  color: red;
+  font-size: 14px;
+  color: whitesmoke;
   background: #1c1f26;
   padding: 10px 10px;
   display: flex;
