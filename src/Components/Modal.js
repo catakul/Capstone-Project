@@ -40,89 +40,96 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
             <STYLED_SPAN>
               <STYLED_ICONS>
                 <Icon icon="logos:react" width="35" height="35" />
-                <span>Overview</span>
+                Overview
               </STYLED_ICONS>
             </STYLED_SPAN>
             {/* <InfoContainer title="NAME" text={`${content.name}KMOL`}/> */}
             {/* Aulagern um den Code übersichtlicher zu machen */}
             <STYLED_INFORMATIONS>
-              <StyledTag>NAME:</StyledTag>{' '}
-              <StyledContent> {content.name}</StyledContent>{' '}
+              <StyledTag>NAME:</StyledTag>
+              <StyledContent> {content.name}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>ATOMIC MASS:</StyledTag>{' '}
-              <StyledContent>{content.atomic_mass}</StyledContent>{' '}
+              <StyledTag>SUMMARY:</StyledTag>
+              <StyledContent>{content.summary}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>NAMED BY:</StyledTag>{' '}
-              <StyledContent>{content.named_by}</StyledContent>{' '}
+              <StyledTag>ATOMIC NUMBER:</StyledTag>
+              <StyledContent>{content.number}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>CATEGORY:</StyledTag>{' '}
-              <StyledContent>{content.category}</StyledContent>{' '}
+              <StyledTag>NAMED BY:</StyledTag>
+              <StyledContent>{content.named_by}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>DISCOVERED BY:</StyledTag>{' '}
-              <StyledContent>{content.discovered_by}</StyledContent>{' '}
+              <StyledTag>CATEGORY:</StyledTag>
+              <StyledContent>{content.category}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>APPEARANCE:</StyledTag>{' '}
-              <StyledContent>{content.appearance}</StyledContent>{' '}
+              <StyledTag>DISCOVERED BY:</StyledTag>
+              <StyledContent>{content.discovered_by}</StyledContent>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag>APPEARANCE:</StyledTag>
+              <StyledContent>{content.appearance}</StyledContent>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag> SOURCE:</StyledTag>
+              <StyledContent href={content.source}>
+                {/* link einfügen */}
+                {content.source}
+              </StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_SPAN>
               <STYLED_ICONS>
                 <Icon
                   icon="fontisto:laboratory"
-                  color="red"
+                  color="blue"
                   width="32"
                   height="32"
                 />
-                <span>Properties</span>
+                Properties
               </STYLED_ICONS>
             </STYLED_SPAN>
+            <STYLED_INFORMATIONS>
+              <StyledTag>ATOMIC MASS:</StyledTag>
+              <StyledContent>{content.atomic_mass}</StyledContent>
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag>DENSITY:</StyledTag>
+              <StyledContent>{content.density}</StyledContent>
+            </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
               <StyledTag>BOILING POINT:</StyledTag>
               <StyledContent>{content.boil} Kelvin</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>MELTING POINT:</StyledTag>{' '}
-              <StyledContent>{content.melt}</StyledContent>{' '}
+              <StyledTag>MELTING POINT:</StyledTag>
+              <StyledContent>{content.melt} Kelvin</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>DENSITY:</StyledTag>{' '}
-              <StyledContent>{content.density} g/L</StyledContent>{' '}
+              <StyledTag>MOLAR HEAT CAPACITY:</StyledTag>
+              <StyledContent>{content.molar_heat} J/(mol·K)</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag> SOURCE:</StyledTag>{' '}
-              <StyledContent>{content.source}</StyledContent>{' '}
+              <StyledTag>PHASE AT STP:</StyledTag>
+              <StyledContent>{content.phase}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>MOLAR HEAT CAPACITY:</StyledTag>{' '}
-              <StyledContent>{content.molar_heat}</StyledContent>{' '}
+              <StyledTag> GROUP:</StyledTag>
+              <StyledContent>{content.group}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>ATOMIC NUMBER:</StyledTag>{' '}
-              <StyledContent>{content.number}</StyledContent>{' '}
+              <StyledTag> PERIOD:</StyledTag>
+              <StyledContent>{content.period}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag> PERIOD:</StyledTag>{' '}
-              <StyledContent>{content.period}</StyledContent>{' '}
+              <StyledTag>ELTRONS PER SHELL:</StyledTag>
+              <StyledContent>{content.shells}</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>PHASE AT STP:</StyledTag>{' '}
-              <StyledContent>{content.phase}</StyledContent>{' '}
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>SUMMARY:</StyledTag>{' '}
-              <StyledContent>{content.summary}</StyledContent>{' '}
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ELTRON SHELLS:</StyledTag>{' '}
-              <StyledContent>{content.shells}</StyledContent>{' '}
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ELECTRONIC CONFIGURATION:</StyledTag>{' '}
-              <StyledContent>{content.electron_configuration}</StyledContent>{' '}
+              <StyledTag>ELECTRON CONFIGURATION:</StyledTag>
+              <StyledContent>{content.electron_configuration}</StyledContent>
             </STYLED_INFORMATIONS>
             {/* <STYLED_INFORMATIONS> 
               {content.electron_configuration_semantic}
@@ -130,24 +137,28 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
             <STYLED_SPAN>
               <STYLED_ICONS>
                 <Icon
-                  icon="jam:triangle-danger"
+                  icon="fa6-solid:explosion"
                   color="red"
                   width="35"
                   height="35"
                 />
-                <span>Reactivity</span>
+                Reactivity
               </STYLED_ICONS>
             </STYLED_SPAN>
             <STYLED_INFORMATIONS>
-              <StyledTag>ELECTRON AFFINITY:</StyledTag>{' '}
-              <StyledContent>{content.electron_affinity} kJ/mol</StyledContent>{' '}
+              <StyledTag>ELECTRON AFFINITY:</StyledTag>
+              <StyledContent>{content.electron_affinity} kJ/mol</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              <StyledTag>ELECTRONEGATIVITY:</StyledTag>{' '}
-              <StyledContent>{content.electronegativity_pauling}</StyledContent>{' '}
+              <StyledTag>ELECTRONEGATIVITY:</StyledTag>
+              <StyledContent>{content.electronegativity_pauling}</StyledContent>
             </STYLED_INFORMATIONS>
             {/* <STYLED_INFORMATIONS>
-              IONIZATION ENERGIES: {content.ionization_energies}
+              <StyledTag>IONIZATION ENERGIES:</StyledTag>
+              <StyledContent>
+                {content.ionization_energies} kJ/mol
+                // needs a fix !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+              </StyledContent>
             </STYLED_INFORMATIONS> */}
           </STYLED_INNER_MODAL>
         </STYLED_OUTER_MODAL>
@@ -199,6 +210,8 @@ const STYLED_INNER_MODAL = styled.div`
 const StyledTag = styled.div`
   opacity: 0.4;
   text-align: left;
+  text-decoration: underline;
+  padding-bottom: 5px;
 `;
 
 const StyledContent = styled.div`
@@ -216,6 +229,7 @@ const STYLED_INFORMATIONS = styled.div`
 const STYLED_SPAN = styled.span`
   background-color: blanchedalmond;
   padding: 14px 15px;
+  font-size: 1.2rem;
 `;
 
 const STYLED_ICONS = styled.div`
