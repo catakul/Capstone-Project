@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
+import Navigation from '../Components/Navigation.js';
 
-export default function Modal({isOpen, onClose, content}) {
-  console.log(content);
+export default function Modal({isOpen, onClose, content, handleClick}) {
   return (
     isOpen && (
       <>
@@ -18,10 +18,8 @@ export default function Modal({isOpen, onClose, content}) {
             <STYLED_WIKIPEDIA_ICON href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
             </STYLED_WIKIPEDIA_ICON>
-
             {/* images */}
             <STYLED_IMAGE src={content.spectral_img}></STYLED_IMAGE>
-
             <STYLED_ELEMENT>
               <span>{content.symbol}</span>
             </STYLED_ELEMENT>
@@ -32,32 +30,43 @@ export default function Modal({isOpen, onClose, content}) {
               <span>{content.atomic_mass}</span>
             </STYLED_ATOMIC_MASS>
 
+            <Navigation
+              handleClick={handleClick}
+              currentContentIndex={content.number}
+            />
+
             <STYLED_SPAN>
-              <STYLED_ICON>
+              <STYLED_ICONS>
                 <Icon icon="logos:react" width="35" height="35" />
                 <span>Overview</span>
-              </STYLED_ICON>
+              </STYLED_ICONS>
             </STYLED_SPAN>
-
-            <STYLED_INFORMATIONS>NAME: {content.name}</STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              ATOMIC MASS: {content.atomic_mass}
+              <StyledTag>NAME:</StyledTag>{' '}
+              <StyledContent> {content.name}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              NAMED BY: {content.named_by}
+              <StyledTag>ATOMIC MASS:</StyledTag>{' '}
+              <StyledContent>{content.atomic_mass}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              CATEGORY: {content.category}
+              <StyledTag>NAMED BY:</StyledTag>{' '}
+              <StyledContent>{content.named_by}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              DISCOVERED BY: {content.discovered_by}
+              <StyledTag>CATEGORY:</StyledTag>{' '}
+              <StyledContent>{content.category}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              APPEARANCE: {content.appearance}
+              <StyledTag>DISCOVERED BY:</StyledTag>{' '}
+              <StyledContent>{content.discovered_by}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
-
+            <STYLED_INFORMATIONS>
+              <StyledTag>APPEARANCE:</StyledTag>{' '}
+              <StyledContent>{content.appearance}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
             <STYLED_SPAN>
-              <STYLED_ICON>
+              <STYLED_ICONS>
                 <Icon
                   icon="fontisto:laboratory"
                   color="red"
@@ -65,40 +74,57 @@ export default function Modal({isOpen, onClose, content}) {
                   height="32"
                 />
                 <span>Properties</span>
-              </STYLED_ICON>
+              </STYLED_ICONS>
             </STYLED_SPAN>
-
             <STYLED_INFORMATIONS>
-              BOILING POINT: {content.boil}
+              <StyledTag>BOILING POINT:</StyledTag>
+              <StyledContent>{content.boil} Kelvin</StyledContent>
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              MELTING POINT: {content.melt}
+              <StyledTag>MELTING POINT:</StyledTag>{' '}
+              <StyledContent>{content.melt}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              DENSITY: {content.density}
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>SOURCE: {content.source}</STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>{content.molar_heat}</STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              ATOMIC NUMBER: {content.number}
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>PERIOD: {content.period}</STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              PHASE AT STP: {content.phase}
+              <StyledTag>DENSITY:</StyledTag>{' '}
+              <StyledContent>{content.density}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              SUMMARY: {content.summary}
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>{content.shells}</STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              ELECTRONIC CONFIGURATION: {content.electron_configuration}
+              <StyledTag> SOURCE:</StyledTag>{' '}
+              <StyledContent>{content.source}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
+              <StyledTag>MOLAR HEAT CAPACITY:</StyledTag>{' '}
+              <StyledContent>{content.molar_heat}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag>ATOMIC NUMBER:</StyledTag>{' '}
+              <StyledContent>{content.number}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag> PERIOD:</StyledTag>{' '}
+              <StyledContent>{content.period}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag>PHASE AT STP:</StyledTag>{' '}
+              <StyledContent>{content.phase}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag>SUMMARY:</StyledTag>{' '}
+              <StyledContent>{content.summary}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag>ELTRON SHELLS:</StyledTag>{' '}
+              <StyledContent>{content.shells}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
+            <STYLED_INFORMATIONS>
+              <StyledTag>ELECTRONIC CONFIGURATION:</StyledTag>{' '}
+              <StyledContent>{content.electron_configuration}</StyledContent>{' '}
+            </STYLED_INFORMATIONS>
+            {/* <STYLED_INFORMATIONS> 
               {content.electron_configuration_semantic}
-            </STYLED_INFORMATIONS>
-
+            </STYLED_INFORMATIONS> */}
             <STYLED_SPAN>
-              <STYLED_ICON>
+              <STYLED_ICONS>
                 <Icon
                   icon="jam:triangle-danger"
                   color="red"
@@ -106,18 +132,19 @@ export default function Modal({isOpen, onClose, content}) {
                   height="35"
                 />
                 <span>Reactivity</span>
-              </STYLED_ICON>
+              </STYLED_ICONS>
             </STYLED_SPAN>
-
             <STYLED_INFORMATIONS>
-              ELECTRON AFFINITY: {content.electron_affinity}
+              <StyledTag>ELECTRON AFFINITY:</StyledTag>{' '}
+              <StyledContent>{content.electron_affinity} kJ/mol</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
-              ELECTRONEGATIVITY: {content.electronegativity_pauling}
+              <StyledTag>ELECTRONEGATIVITY:</StyledTag>{' '}
+              <StyledContent>{content.electronegativity_pauling}</StyledContent>{' '}
             </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
+            {/* <STYLED_INFORMATIONS>
               IONIZATION ENERGIES: {content.ionization_energies}
-            </STYLED_INFORMATIONS>
+            </STYLED_INFORMATIONS> */}
           </STYLED_INNER_MODAL>
         </STYLED_OUTER_MODAL>
       </>
@@ -165,11 +192,21 @@ const STYLED_INNER_MODAL = styled.div`
     height: 100vh;
   }
 `;
+const StyledTag = styled.div`
+  opacity: 0.4;
+  text-align: left;
+`;
+
+const StyledContent = styled.div`
+  text-align: left;
+`;
 
 const STYLED_INFORMATIONS = styled.div`
   background: #1c1f26;
   padding: 14px 15px;
   border-bottom: 1px solid hsla(0, 0%, 44.7%, 0.35);
+  display: flex;
+  flex-flow: column wrap;
 `;
 
 const STYLED_SPAN = styled.span`
@@ -177,7 +214,7 @@ const STYLED_SPAN = styled.span`
   padding: 14px 15px;
 `;
 
-const STYLED_ICON = styled.div`
+const STYLED_ICONS = styled.div`
   width: 130px;
   display: flex;
   justify-content: space-around;
