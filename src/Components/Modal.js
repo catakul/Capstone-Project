@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 import Navigation from '../Components/Navigation.js';
 
-export default function Modal({isOpen, onClose, content, handleClick}) {
+export default function Modal({isOpen, onClose, content, onNavigate}) {
   return (
     isOpen && (
       <>
@@ -18,20 +18,22 @@ export default function Modal({isOpen, onClose, content, handleClick}) {
             <STYLED_WIKIPEDIA_ICON href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
             </STYLED_WIKIPEDIA_ICON>
-            {/* images */}
             <STYLED_IMAGE src={content.spectral_img}></STYLED_IMAGE>
             <STYLED_ELEMENT>
               <span>{content.symbol}</span>
             </STYLED_ELEMENT>
             <STYLED_ELEMENT_NAME>
+              {/* <StyledTypography variant="heading"> */}
+              {/* vllt mache ich das so */}
               <span>{content.name}</span>
+              {/* </StyledTypography> */}
             </STYLED_ELEMENT_NAME>
             <STYLED_ATOMIC_MASS>
               <span>{content.atomic_mass}</span>
             </STYLED_ATOMIC_MASS>
 
             <Navigation
-              handleClick={handleClick}
+              onNavigate={onNavigate}
               currentContentIndex={content.number}
             />
 
@@ -41,6 +43,8 @@ export default function Modal({isOpen, onClose, content, handleClick}) {
                 <span>Overview</span>
               </STYLED_ICONS>
             </STYLED_SPAN>
+            {/* <InfoContainer title="NAME" text={`${content.name}KMOL`}/> */}
+            {/* Aulagern um den Code übersichtlicher zu machen */}
             <STYLED_INFORMATIONS>
               <StyledTag>NAME:</StyledTag>{' '}
               <StyledContent> {content.name}</StyledContent>{' '}
@@ -86,7 +90,7 @@ export default function Modal({isOpen, onClose, content, handleClick}) {
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
               <StyledTag>DENSITY:</StyledTag>{' '}
-              <StyledContent>{content.density}</StyledContent>{' '}
+              <StyledContent>{content.density} g/L</StyledContent>{' '}
             </STYLED_INFORMATIONS>
             <STYLED_INFORMATIONS>
               <StyledTag> SOURCE:</StyledTag>{' '}
@@ -228,9 +232,6 @@ const STYLED_WIKIPEDIA_ICON = styled.a`
   text-decoration: none;
   padding-top: 7px;
   padding-left: 7px;
-  position: sticky; //funktioniert nicht....
-
-  //muss mittig gemacht werden
 `;
 
 const STYLED_CLOSE_BUTTON = styled.button`
@@ -254,22 +255,28 @@ const STYLED_IMAGE = styled.img`
   position: relative;
 `;
 
-const STYLED_ELEMENT = styled.text`
+const STYLED_ELEMENT = styled.p`
   font-size: 3.5rem;
   display: flex;
   justify-content: flex-start;
 `;
 
-const STYLED_ELEMENT_NAME = styled.text`
+const STYLED_ELEMENT_NAME = styled.p`
   font-size: 1.2rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
 `;
 
-const STYLED_ATOMIC_MASS = styled.text`
+const STYLED_ATOMIC_MASS = styled.p`
   font-size: 1.2rem;
   font-weight: lighter;
   display: flex;
   justify-content: center;
 `;
+
+// const StyledTypography = styled.p`
+//   font-size: ${({variant}) => {
+//     return variant === 'heading' ? '1.6rem' : '1rem';
+//   }};
+// `;
