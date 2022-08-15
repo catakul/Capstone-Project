@@ -1,21 +1,12 @@
 import PeriodicTable from './Components/PeriodicTable.js';
 import styled from 'styled-components';
-import {Icon} from '@iconify/react';
 
 export default function App() {
   return (
     <StyledBody>
-      <StyledNavbar>
-        {/* <StyledSearch>
-          <Icon
-            icon="ant-design:search-outlined"
-            color="red  "
-            width="23"
-            height="23"
-          />
-        </StyledSearch> */}
+      <StyledTitel>
         <h1>Periodic Table of Elements</h1>
-      </StyledNavbar>
+      </StyledTitel>
       <main>
         <PeriodicTable />
       </main>
@@ -24,11 +15,12 @@ export default function App() {
 }
 
 const StyledBody = styled.div`
-  overflow-y: scroll;
+  overflow-y: none;
   overflow-x: scroll;
+  scrollbar-width: none;
 `;
 
-const StyledNavbar = styled.nav`
+const StyledTitel = styled.nav`
   overflow: hidden;
   width: 100vw;
   top: -20px;
@@ -40,19 +32,3 @@ const StyledNavbar = styled.nav`
   display: flex;
   justify-content: center;
 `;
-
-// const StyledSearch = styled.div`
-//   position: absolute;
-//   display: flex;
-//   justify-content: center;
-// `;
-
-/* <Wrapper>
-  <App />
-</Wrapper>
-
-
-const Wrapper = styled.main`
-  max-width: 600px;
-  margin: 0 auto;
-`; */
