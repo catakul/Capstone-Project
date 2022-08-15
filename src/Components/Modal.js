@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {Icon} from '@iconify/react';
 import Navigation from '../Components/Navigation.js';
+import ElementContent from './ElementContent.js';
 
 export default function Modal({isOpen, onClose, content, onNavigate}) {
   return (
@@ -18,69 +19,44 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
             <STYLED_WIKIPEDIA_ICON href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
             </STYLED_WIKIPEDIA_ICON>
-            <STYLED_IMAGE src={content.spectral_img}></STYLED_IMAGE>
-            <STYLED_ELEMENT>
-              <span>{content.symbol}</span>
-            </STYLED_ELEMENT>
-            <STYLED_ELEMENT_NAME>
-              {/* <StyledTypography variant="heading"> */}
-              {/* vllt mache ich das so */}
-              <span>{content.name}</span>
-              {/* </StyledTypography> */}
-            </STYLED_ELEMENT_NAME>
-            <STYLED_ATOMIC_MASS>
-              <span>{content.atomic_mass}</span>
-            </STYLED_ATOMIC_MASS>
+
+            <StyledBackground urllink={content.spectral_img}>
+              <StyledElement>{content.symbol}</StyledElement>
+              <StyledElementCluster>
+                <StyledElementName>{content.name}</StyledElementName>
+                <StyledAtomicMass>{content.atomic_mass}</StyledAtomicMass>
+              </StyledElementCluster>
+              <StyledOpacity />
+            </StyledBackground>
 
             <Navigation
               onNavigate={onNavigate}
               currentContentIndex={content.number}
+              currentContentNumber={content.number}
             />
 
-            <STYLED_SPAN>
+            <StyledSection>
               <STYLED_ICONS>
                 <Icon icon="logos:react" width="35" height="35" />
-                Overview
               </STYLED_ICONS>
-            </STYLED_SPAN>
-            {/* <InfoContainer title="NAME" text={`${content.name}KMOL`}/> */}
-            {/* Aulagern um den Code übersichtlicher zu machen */}
-            <STYLED_INFORMATIONS>
-              <StyledTag>NAME:</StyledTag>
-              <StyledContent> {content.name}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>SUMMARY:</StyledTag>
-              <StyledContent>{content.summary}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ATOMIC NUMBER:</StyledTag>
-              <StyledContent>{content.number}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>NAMED BY:</StyledTag>
-              <StyledContent>{content.named_by}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>CATEGORY:</StyledTag>
-              <StyledContent>{content.category}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>DISCOVERED BY:</StyledTag>
-              <StyledContent>{content.discovered_by}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>APPEARANCE:</StyledTag>
-              <StyledContent>{content.appearance}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag> SOURCE:</StyledTag>
-              <StyledContent href={content.source}>
-                {/* link einfügen */}
-                {content.source}
-              </StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_SPAN>
+              Overview
+            </StyledSection>
+            <ElementContent title="NAME:" text={content.name} />
+            <ElementContent title="SUMMARY:" text={content.summary} />
+            <ElementContent title="ATOMIC NUMBER:" text={content.number} />
+            <ElementContent title="NAMED BY:" text={content.named_by} />
+            <ElementContent title="CATEGORY:" text={content.category} />
+            <ElementContent
+              title="DISCOVERED BY:"
+              text={content.discovered_by}
+            />
+            <ElementContent title="APPEARANCE:" text={content.appearance} />
+            <ElementContent
+              title="SOURCE:"
+              text={<a href={content.source}>{content.source}</a>}
+            />
+
+            <StyledSection>
               <STYLED_ICONS>
                 <Icon
                   icon="fontisto:laboratory"
@@ -88,53 +64,35 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
                   width="32"
                   height="32"
                 />
-                Properties
               </STYLED_ICONS>
-            </STYLED_SPAN>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ATOMIC MASS:</StyledTag>
-              <StyledContent>{content.atomic_mass}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>DENSITY:</StyledTag>
-              <StyledContent>{content.density}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>BOILING POINT:</StyledTag>
-              <StyledContent>{content.boil} Kelvin</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>MELTING POINT:</StyledTag>
-              <StyledContent>{content.melt} Kelvin</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>MOLAR HEAT CAPACITY:</StyledTag>
-              <StyledContent>{content.molar_heat} J/(mol·K)</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>PHASE AT STP:</StyledTag>
-              <StyledContent>{content.phase}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag> GROUP:</StyledTag>
-              <StyledContent>{content.group}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag> PERIOD:</StyledTag>
-              <StyledContent>{content.period}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ELTRONS PER SHELL:</StyledTag>
-              <StyledContent>{content.shells}</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ELECTRON CONFIGURATION:</StyledTag>
-              <StyledContent>{content.electron_configuration}</StyledContent>
-            </STYLED_INFORMATIONS>
-            {/* <STYLED_INFORMATIONS> 
-              {content.electron_configuration_semantic}
-            </STYLED_INFORMATIONS> */}
-            <STYLED_SPAN>
+              Properties
+            </StyledSection>
+            <ElementContent title="ATOMIC MASS:" text={content.atomic_mass} />
+            <ElementContent title="DENSITY:" text={content.density} />
+            <ElementContent
+              title="BOILING POINT:"
+              text={`${content.boil} Kelvin`}
+            />
+            <ElementContent
+              title="MELTING POINT:"
+              text={`${content.melt} Kelvin`}
+            />
+            <ElementContent
+              title="MOLAR HEAT CAPACITY:"
+              text={`${content.molar_heat} J/(mol·K)`}
+            />
+            <ElementContent title="PHASE AT STP:" text={content.phase} />
+            <ElementContent title="GROUP:" text={content.group} />
+            <ElementContent title="PERIOD:" text={content.period} />
+            <ElementContent
+              title="ELECTRONS (PER SHELL):"
+              text={content.shells}
+            />
+            <ElementContent
+              title="ELECTRON CONFIGURATION:"
+              text={content.electron_configuration}
+            />
+            <StyledSection>
               <STYLED_ICONS>
                 <Icon
                   icon="fa6-solid:explosion"
@@ -142,30 +100,67 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
                   width="35"
                   height="35"
                 />
-                Reactivity
               </STYLED_ICONS>
-            </STYLED_SPAN>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ELECTRON AFFINITY:</StyledTag>
-              <StyledContent>{content.electron_affinity} kJ/mol</StyledContent>
-            </STYLED_INFORMATIONS>
-            <STYLED_INFORMATIONS>
-              <StyledTag>ELECTRONEGATIVITY:</StyledTag>
-              <StyledContent>{content.electronegativity_pauling}</StyledContent>
-            </STYLED_INFORMATIONS>
-            {/* <STYLED_INFORMATIONS>
-              <StyledTag>IONIZATION ENERGIES:</StyledTag>
-              <StyledContent>
-                {content.ionization_energies} kJ/mol
-                // needs a fix !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-              </StyledContent>
-            </STYLED_INFORMATIONS> */}
+              Reactivity
+            </StyledSection>
+            <ElementContent
+              title="ELECTRON AFFINITY:"
+              text={`${content.electron_affinity} kJ/mol`}
+            />
+
+            <ElementContent
+              title="ELECTRONEGATIVITY:"
+              text={content.electronegativity_pauling}
+            />
           </STYLED_INNER_MODAL>
         </STYLED_OUTER_MODAL>
       </>
     )
   );
 }
+
+const StyledOpacity = styled.div`
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 22%;
+  width: 100%;
+  @media (max-width: 667px) {
+    height: 35%;
+  }
+`;
+
+const StyledBackground = styled.div`
+  background-image: url(${props => props.urllink});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+`;
+
+const StyledElementCluster = styled.div`
+  padding: 156px 220px 0 15px;
+  z-index: 11000000000;
+`;
+
+const StyledElement = styled.div`
+  font-size: 3.8rem;
+  padding: 140px 130px 20px 4px;
+  z-index: 1;
+`;
+
+const StyledElementName = styled.div`
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 3.5px;
+`;
+
+const StyledAtomicMass = styled.div`
+  font-size: 1rem;
+  font-weight: lighter;
+`;
 
 const STYLED_OUTER_MODAL = styled.div`
   overflow: none;
@@ -176,7 +171,7 @@ const STYLED_OUTER_MODAL = styled.div`
   height: 100vh;
   background: rgba(0, 0, 0, 0.55);
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: none;
 `;
 
 const STYLED_INNER_MODAL = styled.div`
@@ -192,51 +187,32 @@ const STYLED_INNER_MODAL = styled.div`
   transform: translate(-50%, -50%);
   width: 25vw;
   height: 92vh;
-  /* min-width: 350px; */
   background-color: rgba(24, 24, 24, 0.95);
   color: white;
   overflow: hidden;
   overflow-y: scroll;
   overflow-x: scroll;
   scrollbar-width: thin;
-  position: absolute;
-  z-index: 999;
   min-height: 100%;
   @media all and (max-width: 600px) {
     width: 100vw;
     height: 100vh;
   }
 `;
-const StyledTag = styled.div`
-  opacity: 0.4;
-  text-align: left;
-  text-decoration: underline;
-  padding-bottom: 5px;
-`;
 
-const StyledContent = styled.div`
-  text-align: left;
-`;
-
-const STYLED_INFORMATIONS = styled.div`
-  background: #1c1f26;
-  padding: 14px 15px;
-  border-bottom: 1px solid hsla(0, 0%, 44.7%, 0.35);
-  display: flex;
-  flex-flow: column wrap;
-`;
-
-const STYLED_SPAN = styled.span`
-  background-color: blanchedalmond;
+const StyledSection = styled.section`
+  background-color: beige;
   padding: 14px 15px;
   font-size: 1.2rem;
+  color: black;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 `;
 
 const STYLED_ICONS = styled.div`
-  width: 130px;
-  display: flex;
-  justify-content: space-around;
-  color: black;
+  margin-right: 20px;
+  margin-top: 5px;
 `;
 
 const STYLED_WIKIPEDIA_ICON = styled.a`
@@ -252,9 +228,6 @@ const STYLED_CLOSE_BUTTON = styled.button`
   position: absolute;
   right: -4px;
   top: 3px;
-  /* display: flex;
-  justify-content: flex-end; */
-  z-index: 1000;
   border: 0;
   background: transparent;
   color: white;
@@ -262,35 +235,3 @@ const STYLED_CLOSE_BUTTON = styled.button`
     top: 0;
   }
 `;
-
-const STYLED_IMAGE = styled.img`
-  width: 56.9vh;
-  height: 30vh;
-  position: relative;
-`;
-
-const STYLED_ELEMENT = styled.p`
-  font-size: 3.5rem;
-  display: flex;
-  justify-content: flex-start;
-`;
-
-const STYLED_ELEMENT_NAME = styled.p`
-  font-size: 1.2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-`;
-
-const STYLED_ATOMIC_MASS = styled.p`
-  font-size: 1.2rem;
-  font-weight: lighter;
-  display: flex;
-  justify-content: center;
-`;
-
-// const StyledTypography = styled.p`
-//   font-size: ${({variant}) => {
-//     return variant === 'heading' ? '1.6rem' : '1rem';
-//   }};
-// `;
