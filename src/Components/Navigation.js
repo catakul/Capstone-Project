@@ -13,26 +13,21 @@ const Navigation = ({
   const dataRight = data.elements.find(
     data => data.number === currentContentIndex + 1
   );
-  console.log(currentContentIndex);
-  const numberSwitch = currentContentIndex - 1;
 
-  console.log(dataLeft);
-  const textLeft = dataLeft === undefined ? '' : dataLeft.name;
-  const textRight = dataRight === undefined ? '' : dataRight.name;
+  const textLeft = dataLeft === undefined ? 'Unuennium' : dataLeft.name;
+  const textRight = dataRight === undefined ? 'Hydrogen' : dataRight.name;
 
-  const idLeft = dataLeft === undefined ? 1 : dataLeft.number;
-  const idRight = dataRight === undefined ? 119 : dataRight.number;
-
-  // const idSwitch = numberSwitch === 0 ? '' : numberSwitch.number;
+  const idLeft = dataLeft === undefined ? 119 : dataLeft.number;
+  const idRight = dataRight === undefined ? 1 : dataRight.number;
 
   return (
     <StyledDV>
       <StyledButtons type="button" onClick={() => onNavigate(idLeft)}>
         <Icon icon="ant-design:arrow-left-outlined" width="14" />
-        {numberSwitch} · {textLeft}
+        {idLeft} · {textLeft}
       </StyledButtons>
       <StyledButtons type="button" onClick={() => onNavigate(idRight)}>
-        {textRight} · {currentContentIndex}
+        {textRight} · {idRight}
         <Icon icon="ant-design:arrow-right-outlined" width="14" />
       </StyledButtons>
     </StyledDV>

@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const ElementContent = ({title, text}) => {
   return (
-    <STYLED_INFORMATIONS>
+    <StyledInformations>
       <StyledTag>{title}</StyledTag>
       <StyledContent>{text}</StyledContent>
-    </STYLED_INFORMATIONS>
+    </StyledInformations>
   );
 };
 
@@ -36,7 +36,7 @@ const StyledContent = styled.p`
   }
 `;
 
-const STYLED_INFORMATIONS = styled.div`
+const StyledInformations = styled.div`
   background: #1c1f26;
   padding: 14px 15px;
   border-bottom: 1px solid hsla(0, 0%, 44.7%, 0.35);

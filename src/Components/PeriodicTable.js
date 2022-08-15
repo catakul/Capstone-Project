@@ -2,7 +2,7 @@ import data from '../PeriodicTableJSON.json';
 import {useState} from 'react';
 import Modal from './Modal';
 import styled from 'styled-components';
-// import FilterFunction from '../Components/Filter.js';
+import FilterFunction from '../Components/Filter.js';
 
 const colorMap = {
   actinide: '#7377FA',
@@ -21,6 +21,8 @@ const PeriodicTable = () => {
   const [infos, setInfos] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
+  const [isFilter, setIsFilter] = useState(data.elements);
+
   function handleNavigate(elementNumber) {
     const elementToFind = data.elements.find(
       element => element.number === elementNumber
@@ -28,28 +30,43 @@ const PeriodicTable = () => {
     setIsOpen(true);
     setInfos(elementToFind);
   }
+  function setNewFilter(elements) {
+    setIsFilter(elements);
+  }
+  let FilterColor;
 
   return (
     <>
-      {/* <FilterFunction /> */}
+      <FilterFunction setNewFilter={setNewFilter} />
       <StyledPeriodicTable>
-        {data.elements.map((element, index) => (
-          <StyledElement
-            type="button"
-            onClick={() => handleNavigate(element.number)}
-            data-propertiesid={element.number}
-            key={index}
-            style={{
-              gridRow: element.ypos,
-              gridColumn: element.xpos,
-              backgroundColor: colorMap[element.category],
-            }}
-          >
-            <StyledSymbol>{element.symbol}</StyledSymbol>
-            <StyledNumber>{element.number}</StyledNumber>
-            <StyledName>{element.name}</StyledName>
-          </StyledElement>
-        ))}
+        {data.elements.map((element, index) => {
+          {
+            FilterColor = isFilter.find(
+              filter => filter.number === element.number
+            );
+          }
+
+          return (
+            <StyledElement
+              type="button"
+              onClick={() => handleNavigate(element.number)}
+              data-propertiesid={element.number}
+              key={index}
+              style={{
+                gridRow: element.ypos,
+                gridColumn: element.xpos,
+                backgroundColor:
+                  FilterColor === undefined
+                    ? '#2f2f2f'
+                    : colorMap[element.category],
+              }}
+            >
+              <StyledSymbol>{element.symbol}</StyledSymbol>
+              <StyledNumber>{element.number}</StyledNumber>
+              <StyledName>{element.name}</StyledName>
+            </StyledElement>
+          );
+        })}
       </StyledPeriodicTable>
       <Modal
         onNavigate={handleNavigate}

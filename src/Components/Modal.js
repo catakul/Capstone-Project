@@ -7,18 +7,18 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
   return (
     isOpen && (
       <>
-        <STYLED_OUTER_MODAL>
-          <STYLED_INNER_MODAL>
-            <STYLED_CLOSE_BUTTON type="button" onClick={onClose}>
+        <StyledOuterModal>
+          <StyledInnerModal>
+            <StyledCloseButton type="button" onClick={onClose}>
               <Icon
                 icon="ant-design:close-square-outlined"
                 width="45"
                 height="45"
               />
-            </STYLED_CLOSE_BUTTON>
-            <STYLED_WIKIPEDIA_ICON href={content.source}>
+            </StyledCloseButton>
+            <StyledWikipediaIcon href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
-            </STYLED_WIKIPEDIA_ICON>
+            </StyledWikipediaIcon>
 
             <StyledBackground urllink={content.spectral_img}>
               <StyledElement>{content.symbol}</StyledElement>
@@ -36,9 +36,9 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
             />
 
             <StyledSection>
-              <STYLED_ICONS>
+              <StyledIcons>
                 <Icon icon="logos:react" width="35" height="35" />
-              </STYLED_ICONS>
+              </StyledIcons>
               Overview
             </StyledSection>
             <ElementContent title="NAME:" text={content.name} />
@@ -57,14 +57,14 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
             />
 
             <StyledSection>
-              <STYLED_ICONS>
+              <StyledIcons>
                 <Icon
                   icon="fontisto:laboratory"
                   color="blue"
                   width="32"
                   height="32"
                 />
-              </STYLED_ICONS>
+              </StyledIcons>
               Properties
             </StyledSection>
             <ElementContent title="ATOMIC MASS:" text={content.atomic_mass} />
@@ -93,14 +93,14 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
               text={content.electron_configuration}
             />
             <StyledSection>
-              <STYLED_ICONS>
+              <StyledIcons>
                 <Icon
                   icon="fa6-solid:explosion"
                   color="red"
                   width="35"
                   height="35"
                 />
-              </STYLED_ICONS>
+              </StyledIcons>
               Reactivity
             </StyledSection>
             <ElementContent
@@ -112,8 +112,8 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
               title="ELECTRONEGATIVITY:"
               text={content.electronegativity_pauling}
             />
-          </STYLED_INNER_MODAL>
-        </STYLED_OUTER_MODAL>
+          </StyledInnerModal>
+        </StyledOuterModal>
       </>
     )
   );
@@ -142,7 +142,7 @@ const StyledBackground = styled.div`
 
 const StyledElementCluster = styled.div`
   padding: 156px 220px 0 15px;
-  z-index: 11000000000;
+  z-index: 1;
 `;
 
 const StyledElement = styled.div`
@@ -162,7 +162,7 @@ const StyledAtomicMass = styled.div`
   font-weight: lighter;
 `;
 
-const STYLED_OUTER_MODAL = styled.div`
+const StyledOuterModal = styled.div`
   overflow: none;
   position: absolute;
   top: 0;
@@ -174,7 +174,7 @@ const STYLED_OUTER_MODAL = styled.div`
   overflow-x: none;
 `;
 
-const STYLED_INNER_MODAL = styled.div`
+const StyledInnerModal = styled.div`
   display: flex;
   text-align: center;
   flex-flow: column;
@@ -210,12 +210,12 @@ const StyledSection = styled.section`
   align-items: center;
 `;
 
-const STYLED_ICONS = styled.div`
+const StyledIcons = styled.div`
   margin-right: 20px;
   margin-top: 5px;
 `;
 
-const STYLED_WIKIPEDIA_ICON = styled.a`
+const StyledWikipediaIcon = styled.a`
   display: flex;
   justify-content: flex-start;
   color: white;
@@ -224,7 +224,7 @@ const STYLED_WIKIPEDIA_ICON = styled.a`
   padding-left: 7px;
 `;
 
-const STYLED_CLOSE_BUTTON = styled.button`
+const StyledCloseButton = styled.button`
   position: absolute;
   right: -4px;
   top: 3px;
