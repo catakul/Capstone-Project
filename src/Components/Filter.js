@@ -66,7 +66,7 @@ const ResetButton = styled.button`
   margin: 5px;
   width: 80px;
   height: 55px;
-  background: #777;
+  background: #666;
   color: whitesmoke;
 `;
 
