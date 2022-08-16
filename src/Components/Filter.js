@@ -54,7 +54,7 @@ const StyledFilter = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   position: absolute;
-  left: 35.5%;
+  left: 42.5%;
   margin-bottom: 50px;
 `;
 
