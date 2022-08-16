@@ -42,4 +42,8 @@ const StyledInformations = styled.div`
   border-bottom: 1px solid hsla(0, 0%, 44.7%, 0.35);
   display: flex;
   flex-flow: column wrap;
+  font-size: 18px;
+  @media all and (max-width: 600px) {
+    font-size: 15px;
+  }
 `;

@@ -5,16 +5,16 @@ import styled from 'styled-components';
 import FilterFunction from '../Components/Filter.js';
 
 const colorMap = {
-  actinide: '#7377FA',
-  'noble-gas': '#FFBC42',
-  'alkaline earth metal': '#EC674E',
+  actinide: '#455DB8',
+  'noble-gas': '#FFB400',
+  'alkaline earth metal': '#E45143',
   'diatomic-nonmetal': '#D81159',
   'alkali-metal': '#8F2D56',
-  'transition-metal': '#58586B',
-  'post-transition-metal': '#218380',
-  'polyatomic-nonmetal': '#40FF4D',
-  lanthanide: '#4AABAF',
-  metalloid: '#73D2DE',
+  'transition-metal': '#7F4800',
+  'post-transition-metal': '#6A456B',
+  'polyatomic-nonmetal': '#40B44D',
+  lanthanide: '#008F7A',
+  metalloid: '#255473',
 };
 
 const PeriodicTable = () => {
@@ -40,12 +40,9 @@ const PeriodicTable = () => {
       <FilterFunction setNewFilter={setNewFilter} />
       <StyledPeriodicTable>
         {data.elements.map((element, index) => {
-          {
-            FilterColor = isFilter.find(
-              filter => filter.number === element.number
-            );
-          }
-
+          FilterColor = isFilter.find(
+            filter => filter.number === element.number
+          );
           return (
             <StyledElement
               type="button"
@@ -57,7 +54,7 @@ const PeriodicTable = () => {
                 gridColumn: element.xpos,
                 backgroundColor:
                   FilterColor === undefined
-                    ? '#2f2f2f'
+                    ? '#666'
                     : colorMap[element.category],
               }}
             >
@@ -82,9 +79,11 @@ export default PeriodicTable;
 
 const StyledPeriodicTable = styled.div`
   display: grid;
-  grid-template-columns: repeat(18, 54px);
-  grid-template-rows: repeat(10, 54px);
+  grid-template-columns: repeat(18, 58px);
+  grid-template-rows: repeat(10, 58px);
   grid-gap: 2px;
+  margin-top: 13%;
+
   @media all and (min-width: 600px) {
     display: grid;
     grid-template-columns: repeat(18, 70px);
@@ -99,6 +98,8 @@ const StyledPeriodicTable = styled.div`
 
 const StyledElement = styled.button`
   border: 1px solid black;
+  color: #f7f7f7;
+  border-radius: 5px;
   position: relative;
   display: flex;
   align-items: center;
@@ -107,20 +108,14 @@ const StyledElement = styled.button`
     transform: scale(1.25, 1.25);
     z-index: 1;
   }
-  @media all and (min-width: 600px) {
-    border: 1px solid black;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 const StyledNumber = styled.span`
-  font-size: 10px;
+  font-size: 11px;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 3px;
+  left: 4px;
+  color: whitesmoke;
   @media all and (min-width: 600px) {
     font-size: 14px;
     position: absolute;
@@ -130,18 +125,18 @@ const StyledNumber = styled.span`
 `;
 
 const StyledName = styled.span`
-  font-size: 8px;
+  font-size: 7.5px;
   position: absolute;
   bottom: 4px;
+  color: whitesmoke;
   @media all and (min-width: 600px) {
-    font-size: 10.5px;
+    font-size: 10px;
     position: absolute;
-    bottom: 4px;
   }
 `;
 const StyledSymbol = styled.span`
-  font-size: 22px;
-  position: absolute;
+  font-size: 25px;
+  color: whitesmoke;
   @media all and (min-width: 600px) {
     font-size: 27px;
     position: absolute;

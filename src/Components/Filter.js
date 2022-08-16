@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import data from '../PeriodicTableJSON.json';
 
 const colorMap = {
-  actinide: '#7377FA',
-  'noble-gas': '#FFBC42',
-  'alkaline earth metal': '#EC674E',
+  actinide: '#455DB8',
+  'noble-gas': '#FFB400',
+  'alkaline earth metal': '#E45143',
   'diatomic-nonmetal': '#D81159',
   'alkali-metal': '#8F2D56',
-  'transition-metal': '#58586B',
-  'post-transition-metal': '#218380',
-  'polyatomic-nonmetal': '#40FF4D',
-  lanthanide: '#4AABAF',
-  metalloid: '#73D2DE',
+  'transition-metal': '#7F4800',
+  'post-transition-metal': '#6A456B',
+  'polyatomic-nonmetal': '#40B44D',
+  lanthanide: '#008F7A',
+  metalloid: '#255473',
 };
 
 function FilterFunction({setNewFilter}) {
@@ -28,20 +28,22 @@ function FilterFunction({setNewFilter}) {
   }
 
   function handleCloseFilter() {
-    console.log('TOP:D');
     setNewFilter(data.elements);
   }
   return (
     <StyledFilter>
-      <button onClick={() => handleCloseFilter()}>CloseFilter</button>
+      <ResetButton onClick={() => handleCloseFilter()}>
+        Reset Filter
+      </ResetButton>
       {colorArray.map(color => {
         return (
-          <button
+          <StyledButtons
+            backgroundColor={color.color}
             key={color.name}
             onClick={() => handleFilterFunction(color.name)}
           >
             {color.name}
-          </button>
+          </StyledButtons>
         );
       })}
     </StyledFilter>
@@ -49,13 +51,35 @@ function FilterFunction({setNewFilter}) {
 }
 
 const StyledFilter = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: absolute;
+  left: 35.5%;
+  margin-bottom: 50px;
+`;
+
+const ResetButton = styled.button`
+  border: 1px black solid;
+  border-radius: 8px;
   font-size: 14px;
-  color: red;
-  top: 7%;
-  left: 20%;
+  padding: 2px 3px;
+  margin: 5px;
+  width: 80px;
+  height: 55px;
+  background: #777;
+  color: whitesmoke;
+`;
+
+const StyledButtons = styled.button`
+  background: ${props => props.backgroundColor};
+  border: 1px black solid;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 2px 3px;
+  margin: 5px;
+  width: 80px;
+  height: 55px;
+  color: whitesmoke;
 `;
 
 export default FilterFunction;

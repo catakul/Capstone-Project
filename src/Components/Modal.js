@@ -10,11 +10,7 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
         <StyledOuterModal>
           <StyledInnerModal>
             <StyledCloseButton type="button" onClick={onClose}>
-              <Icon
-                icon="ant-design:close-square-outlined"
-                width="45"
-                height="45"
-              />
+              <Icon icon="ei:close" color="white" width="45" height="45" />
             </StyledCloseButton>
             <StyledWikipediaIcon href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
@@ -32,12 +28,11 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
             <Navigation
               onNavigate={onNavigate}
               currentContentIndex={content.number}
-              currentContentNumber={content.number}
             />
 
             <StyledSection>
               <StyledIcons>
-                <Icon icon="logos:react" width="35" height="35" />
+                <Icon icon="logos:react" width="36" height="36" />
               </StyledIcons>
               Overview
             </StyledSection>
@@ -61,8 +56,8 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
                 <Icon
                   icon="fontisto:laboratory"
                   color="blue"
-                  width="32"
-                  height="32"
+                  width="33"
+                  height="33"
                 />
               </StyledIcons>
               Properties
@@ -97,8 +92,8 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
                 <Icon
                   icon="fa6-solid:explosion"
                   color="red"
-                  width="35"
-                  height="35"
+                  width="33"
+                  height="33"
                 />
               </StyledIcons>
               Reactivity
@@ -120,9 +115,9 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
 }
 
 const StyledOpacity = styled.div`
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.55);
   position: fixed;
-  height: 22%;
+  height: 17%;
   width: 100%;
   @media (max-width: 667px) {
     height: 35%;
@@ -149,29 +144,43 @@ const StyledElement = styled.div`
   font-size: 3.8rem;
   padding: 140px 130px 20px 4px;
   z-index: 1;
+  padding-left: 15px;
 `;
 
 const StyledElementName = styled.div`
   font-size: 1rem;
   font-weight: bold;
   margin: 3.5px;
+  padding-left: 35px;
 `;
 
 const StyledAtomicMass = styled.div`
   font-size: 1rem;
   font-weight: lighter;
+  padding-left: 35px;
 `;
 
 const StyledOuterModal = styled.div`
-  overflow: none;
-  position: absolute;
+  overflow-y: scroll;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  margin-top: 0;
   background: rgba(0, 0, 0, 0.55);
-  overflow-y: scroll;
-  overflow-x: none;
+  z-index: 6;
+  animation: animatetop 1.2s;
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
 `;
 
 const StyledInnerModal = styled.div`
@@ -191,9 +200,10 @@ const StyledInnerModal = styled.div`
   color: white;
   overflow: hidden;
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: none;
   scrollbar-width: thin;
   min-height: 100%;
+
   @media all and (max-width: 600px) {
     width: 100vw;
     height: 100vh;
@@ -202,9 +212,9 @@ const StyledInnerModal = styled.div`
 
 const StyledSection = styled.section`
   background-color: beige;
-  padding: 14px 15px;
+  padding: 8px 9px;
   font-size: 1.2rem;
-  color: black;
+  color: #2f2f2f;
   display: flex;
   justify-content: left;
   align-items: center;
