@@ -37,8 +37,8 @@ const PeriodicTable = () => {
 
   return (
     <>
+      <FilterFunction setNewFilter={setNewFilter} />
       <StyledPeriodicTable>
-        <FilterFunction setNewFilter={setNewFilter} />
         {data.elements.map((element, index) => {
           {
             FilterColor = isFilter.find(

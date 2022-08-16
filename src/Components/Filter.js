@@ -36,7 +36,6 @@ function FilterFunction({setNewFilter}) {
         Reset Filter
       </StyledButtons>
       {colorArray.map(color => {
-        console.log(color);
         return (
           <StyledButtons
             backgroundColor={color.color}
@@ -57,6 +56,7 @@ const StyledFilter = styled.div`
   /* grid-template-rows: 21% 21% 21% 21%; */
   position: absolute;
   left: 35.5%;
+  margin-bottom: 50px;
   /* margin: 0 auto;
   top: 130%;
   display: flex;

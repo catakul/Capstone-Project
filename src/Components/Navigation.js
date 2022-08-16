@@ -18,22 +18,19 @@ const Navigation = ({currentContentIndex, onNavigate}) => {
 
   return (
     <StyledNavigation>
-      <StyledNavigationButtons type="button" onClick={() => onNavigate(idLeft)}>
-        <Icon icon="ant-design:arrow-left-outlined" width="14" />
+      <StyledNavigationButton type="button" onClick={() => onNavigate(idLeft)}>
+        <Icon icon="ant-design:arrow-left-outlined" width="18" />
         {idLeft} · {textLeft}
-      </StyledNavigationButtons>
-      <StyledNavigationButtons
-        type="button"
-        onClick={() => onNavigate(idRight)}
-      >
+      </StyledNavigationButton>
+      <StyledNavigationButton type="button" onClick={() => onNavigate(idRight)}>
         {textRight} · {idRight}
-        <Icon icon="ant-design:arrow-right-outlined" width="14" />
-      </StyledNavigationButtons>
+        <Icon icon="ant-design:arrow-right-outlined" width="18" />
+      </StyledNavigationButton>
     </StyledNavigation>
   );
 };
 
-const StyledNavigationButtons = styled.button`
+const StyledNavigationButton = styled.button`
   font-size: 15px;
   color: whitesmoke;
   background: #1c1f26;
@@ -47,7 +44,7 @@ const StyledNavigationButtons = styled.button`
   }
 `;
 
-const StyledNavigation = styled.div`
+const StyledNavigation = styled.nav`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
