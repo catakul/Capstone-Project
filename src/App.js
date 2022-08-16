@@ -27,12 +27,19 @@ const StyledBody = styled.div`
 const StyledTitel = styled.nav`
   overflow: hidden;
   width: 100vw;
-  top: -20px;
+  top: -21px;
   left: -20px;
   margin: 20px;
+  height: 7vh;
   position: fixed;
-  background-color: #333;
+  background-color: #313740;
   color: whitesmoke;
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 22px rgb(0 0 0 / 35%);
+  h1 {
+    font-size: 25px;
+    font-weight: 300;
+  }
 `;

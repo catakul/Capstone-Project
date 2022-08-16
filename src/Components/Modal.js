@@ -10,11 +10,7 @@ export default function Modal({isOpen, onClose, content, onNavigate}) {
         <StyledOuterModal>
           <StyledInnerModal>
             <StyledCloseButton type="button" onClick={onClose}>
-              <Icon
-                icon="ant-design:close-square-outlined"
-                width="45"
-                height="45"
-              />
+              <Icon icon="ei:close" color="white" width="45" height="45" />
             </StyledCloseButton>
             <StyledWikipediaIcon href={content.source}>
               <Icon icon="fa6-brands:wikipedia-w" width="40" height="40" />
@@ -166,7 +162,6 @@ const StyledAtomicMass = styled.div`
 
 const StyledOuterModal = styled.div`
   overflow-y: scroll;
-  /* overflow-x: scroll; */
   position: fixed;
   top: 0;
   left: 0;
@@ -174,11 +169,9 @@ const StyledOuterModal = styled.div`
   height: 100vh;
   margin-top: 0;
   background: rgba(0, 0, 0, 0.55);
-
   z-index: 6;
-
-  animation: animateright 1.2s;
-  @keyframes animateright {
+  animation: animatetop 1.2s;
+  @keyframes animatetop {
     from {
       top: -300px;
       opacity: 0;
