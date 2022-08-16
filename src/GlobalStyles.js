@@ -12,12 +12,9 @@ export default styled.createGlobalStyle`
     margin: 0;
     padding: 12px;
     font-size: 0.75rem;
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
-  }
-
-  main {
-    margin-top: 65px;
   }
 
   button,

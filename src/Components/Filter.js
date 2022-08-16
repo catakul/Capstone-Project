@@ -3,15 +3,15 @@ import data from '../PeriodicTableJSON.json';
 
 const colorMap = {
   actinide: '#7377FA',
-  'noble-gas': '#FFBC42',
-  'alkaline earth metal': '#EC674E',
+  'noble-gas': '#FFC600',
+  'alkaline earth metal': '#E45143',
   'diatomic-nonmetal': '#D81159',
   'alkali-metal': '#8F2D56',
-  'transition-metal': '#58586B',
-  'post-transition-metal': '#218380',
+  'transition-metal': '#7F4800',
+  'post-transition-metal': '#6A456B',
   'polyatomic-nonmetal': '#40FF4D',
-  lanthanide: '#4AABAF',
-  metalloid: '#73D2DE',
+  lanthanide: '#008F7A',
+  metalloid: '#1E445E',
 };
 
 function FilterFunction({setNewFilter}) {
@@ -28,20 +28,23 @@ function FilterFunction({setNewFilter}) {
   }
 
   function handleCloseFilter() {
-    console.log('TOP:D');
     setNewFilter(data.elements);
   }
   return (
     <StyledFilter>
-      <button onClick={() => handleCloseFilter()}>CloseFilter</button>
+      <StyledButtons onClick={() => handleCloseFilter()}>
+        Reset Filter
+      </StyledButtons>
       {colorArray.map(color => {
+        console.log(color);
         return (
-          <button
+          <StyledButtons
+            backgroundColor={color.color}
             key={color.name}
             onClick={() => handleFilterFunction(color.name)}
           >
             {color.name}
-          </button>
+          </StyledButtons>
         );
       })}
     </StyledFilter>
@@ -49,13 +52,30 @@ function FilterFunction({setNewFilter}) {
 }
 
 const StyledFilter = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 21% 21% 21% 21%; */
+  position: absolute;
+  left: 35.5%;
+  /* margin: 0 auto;
+  top: 130%;
   display: flex;
-  flex-flow: row wrap;
-  position: fixed;
+  flex-flow: row;
+  font-size: 13px;
+  left: 55%;
+  height: 7.5vh;
+  overflow-x: scroll; */
+`;
+
+const StyledButtons = styled.button`
+  background: ${props => props.backgroundColor};
+  border: 1px black solid;
+  border-radius: 5px;
   font-size: 14px;
-  color: red;
-  top: 7%;
-  left: 20%;
+  padding: 2px 3px;
+  margin: 5px;
+  width: 80px;
+  height: 55px;
 `;
 
 export default FilterFunction;

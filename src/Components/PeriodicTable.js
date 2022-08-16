@@ -6,15 +6,15 @@ import FilterFunction from '../Components/Filter.js';
 
 const colorMap = {
   actinide: '#7377FA',
-  'noble-gas': '#FFBC42',
-  'alkaline earth metal': '#EC674E',
+  'noble-gas': '#FFC600',
+  'alkaline earth metal': '#E45143',
   'diatomic-nonmetal': '#D81159',
   'alkali-metal': '#8F2D56',
-  'transition-metal': '#58586B',
-  'post-transition-metal': '#218380',
+  'transition-metal': '#7F4800',
+  'post-transition-metal': '#6A456B',
   'polyatomic-nonmetal': '#40FF4D',
-  lanthanide: '#4AABAF',
-  metalloid: '#73D2DE',
+  lanthanide: '#008F7A',
+  metalloid: '#1E445E',
 };
 
 const PeriodicTable = () => {
@@ -37,8 +37,8 @@ const PeriodicTable = () => {
 
   return (
     <>
-      <FilterFunction setNewFilter={setNewFilter} />
       <StyledPeriodicTable>
+        <FilterFunction setNewFilter={setNewFilter} />
         {data.elements.map((element, index) => {
           {
             FilterColor = isFilter.find(
@@ -57,7 +57,7 @@ const PeriodicTable = () => {
                 gridColumn: element.xpos,
                 backgroundColor:
                   FilterColor === undefined
-                    ? '#2f2f2f'
+                    ? '#666'
                     : colorMap[element.category],
               }}
             >
@@ -85,6 +85,8 @@ const StyledPeriodicTable = styled.div`
   grid-template-columns: repeat(18, 54px);
   grid-template-rows: repeat(10, 54px);
   grid-gap: 2px;
+  margin-top: 22%;
+
   @media all and (min-width: 600px) {
     display: grid;
     grid-template-columns: repeat(18, 70px);
@@ -99,6 +101,8 @@ const StyledPeriodicTable = styled.div`
 
 const StyledElement = styled.button`
   border: 1px solid black;
+  color: #f7f7f7;
+  border-radius: 3px;
   position: relative;
   display: flex;
   align-items: center;
@@ -107,13 +111,13 @@ const StyledElement = styled.button`
     transform: scale(1.25, 1.25);
     z-index: 1;
   }
-  @media all and (min-width: 600px) {
+  /* @media all and (min-width: 600px) {
     border: 1px solid black;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  } */
 `;
 
 const StyledNumber = styled.span`
@@ -121,6 +125,7 @@ const StyledNumber = styled.span`
   position: absolute;
   top: 5px;
   left: 5px;
+  color: black;
   @media all and (min-width: 600px) {
     font-size: 14px;
     position: absolute;
@@ -133,6 +138,7 @@ const StyledName = styled.span`
   font-size: 8px;
   position: absolute;
   bottom: 4px;
+  color: black;
   @media all and (min-width: 600px) {
     font-size: 10.5px;
     position: absolute;
@@ -142,6 +148,7 @@ const StyledName = styled.span`
 const StyledSymbol = styled.span`
   font-size: 22px;
   position: absolute;
+  color: black;
   @media all and (min-width: 600px) {
     font-size: 27px;
     position: absolute;

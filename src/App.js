@@ -7,17 +7,21 @@ export default function App() {
       <StyledTitel>
         <h1>Periodic Table of Elements</h1>
       </StyledTitel>
-      <main>
+      <PeriodicTablePosition>
         <PeriodicTable />
-      </main>
+      </PeriodicTablePosition>
     </StyledBody>
   );
 }
 
+const PeriodicTablePosition = styled.main`
+  position: relative;
+`;
+
 const StyledBody = styled.div`
-  overflow-y: none;
+  /* overflow-y: none;
+  scrollbar-width: none; */
   overflow-x: scroll;
-  scrollbar-width: none;
 `;
 
 const StyledTitel = styled.nav`
