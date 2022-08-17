@@ -211,7 +211,7 @@ const StyledInnerModal = styled.div`
 `;
 
 const StyledSection = styled.section`
-  background-color: beige;
+  background-color: whitesmoke;
   padding: 8px 9px;
   font-size: 1.2rem;
   color: #2f2f2f;
